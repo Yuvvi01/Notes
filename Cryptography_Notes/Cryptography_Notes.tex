@@ -114,7 +114,7 @@ The sum of both cryptography and cryptanalysis.
 A system which converts plain text to cipher text or cipher text to
 plain text by the application of encryption or decryption algorithm.
 The key generation for encryption and decryption algorithms is also
-part of a cryptosystem
+a part of the cryptosystem.
 
 \subsection{Key}
 
@@ -371,20 +371,20 @@ original message.
 It is during and after the European Renaissance, various Italian and
 Papal states led the rapid proliferation of cryptographic techniques.
 Various analysis and attack techniques were researched in this era
-to break the secret codes. 
+to break the secret codes.
 \begin{itemize}
 \item Improved coding techniques such as Vigenere Coding came into existence
 in the 15th century, which offered moving letters in the message with
 a number of variable places instead of moving them the same number
-of places. 
+of places.
 \item Only after the 19th century, cryptography evolved from the ad hoc
 approaches to encryption to the more sophisticated art and science
-of information security. 
+of information security.
 \item In the early 20th century, the invention of mechanical and electromechanical
 machines, such as the Enigma rotor machine, provided more advanced
-and efficient means of coding the information. 
+and efficient means of coding the information.
 \item During the period of World War II, both cryptography and cryptanalysis
-became excessively mathematical. 
+became excessively mathematical.
 \end{itemize}
 With the advances taking place in this field, government organizations,
 military units, and some corporate houses started adopting the applications
@@ -430,10 +430,10 @@ combined to achieve a set of desired security services from a cryptosystem.} are
 be selectively used to provide a set of desired security services
 \textminus{} 
 \begin{itemize}
-\item Encryption 
-\item Hash functions 
-\item Message Authentication codes (MAC) 
-\item Digital Signatures 
+\item Encryption
+\item Hash functions
+\item Message Authentication codes (MAC)
+\item Digital Signatures
 \end{itemize}
 The following table shows the primitives that can achieve a particular
 security service on their own.
@@ -470,6 +470,9 @@ addition to mathematical analysis of cryptographic algorithms, cryptanalysis
 includes the study of side-channel attacks that do not target weaknesses
 in the cryptographic algorithms themselves, but instead exploit weaknesses
 in their implementation.
+
+\vfill{}
+
 
 \subsection{Cryptosystem}
 
@@ -540,16 +543,16 @@ P\xrightarrow{\:\textbf{private key}\:}C\xrightarrow{\:\textbf{private key}\:}P
 
 \subsubsection{Challenge of Private-Key Cryptosystem}
 
-There are two restrictive challenges of employing symmetric key cryptography. 
+There are two restrictive challenges of employing symmetric key cryptography.
 \begin{itemize}
 \item \textbf{Key establishment \textminus{}} Before any communication,
 both the sender and the receiver need to agree on a secret symmetric
-key. It requires a secure key establishment mechanism in place. 
+key. It requires a secure key establishment mechanism in place.
 \item \textbf{Trust Issue \textminus{}} Since the sender and the receiver
 use the same symmetric key, there is an implicit requirement that
 the sender and the receiver `trust' each other. For example, it
 may happen that the receiver has lost the key to an attacker and the
-sender is not informed. 
+sender is not informed.
 \end{itemize}
 These two challenges are highly restraining for modern day communication.
 Today, people need to exchange information with non-familiar and non-trusted
@@ -611,7 +614,7 @@ P\xrightarrow{\:\textbf{public key}\:}C\xrightarrow{\:\textbf{private key}\:}P
 \medskip{}
 
 
-\subsubsection{Challenge of Public-Key Cryptosystem }
+\subsubsection{Challenge of Public-Key Cryptosystem}
 
 Public-key cryptosystems have one significant challenge \textminus{}
 the user needs to trust that the public key that he is using in communications
@@ -640,19 +643,19 @@ should be secure even if everything about the system, except the key,
 is public knowledge.
 
 The six design principles defined by Kerckhoff for cryptosystem are
-\textminus{} 
+\textminus{}
 \begin{itemize}
-\item The cryptosystem should be unbreakable practically, if not mathematically. 
+\item The cryptosystem should be unbreakable practically, if not mathematically.
 \item Falling of the cryptosystem in the hands of an intruder should not
 lead to any compromise of the system, preventing any inconvenience
-to the user. 
-\item The key should be easily communicable, memorable, and changeable. 
-\item The ciphertext should be transmissible by telegraph, an unsecure channel. 
+to the user.
+\item The key should be easily communicable, memorable, and changeable.
+\item The ciphertext should be transmissible by telegraph, an unsecure channel.
 \item The encryption apparatus and documents should be portable and operable
-by a single person. 
+by a single person.
 \item Finally, it is necessary that the system be easy to use, requiring
 neither mental strain nor the knowledge of a long series of rules
-to observe. 
+to observe.
 \end{itemize}
 The second rule is currently known as Kerckhoff principle. It is applied
 in virtually all the contemporary encryption algorithms such as DES,
@@ -742,18 +745,18 @@ conducting some process on the information.
 
 For example, 
 \begin{itemize}
-\item Modifying the information in an unauthorized manner. 
-\item Initiating unintended or unauthorized transmission of information. 
+\item Modifying the information in an unauthorized manner.
+\item Initiating unintended or unauthorized transmission of information.
 \item Alteration of authentication data such as originator name or timestamp
-associated with information 
-\item Unauthorized deletion of data. 
-\item Denial of access to information for legitimate users (denial of service). 
+associated with information.
+\item Unauthorized deletion of data.
+\item Denial of access to information for legitimate users (denial of service).
 \end{itemize}
 
 \subsection{Assumptions of Attacker}
 
 Let us see the prevailing environment around cryptosystems followed
-by the types of attacks employed to break these systems \textminus{}
+by the types of attacks employed to break these systems :
 
 \subsubsection{Environment around Cryptosystem}
 
@@ -762,17 +765,17 @@ to know the cryptosystems environment. The attacker's assumptions
 and knowledge about the environment decides his capabilities.
 
 In cryptography, the following three assumptions are made about the
-security environment and attacker's capabilities. 
+security environment and attacker's capabilities.
 \begin{enumerate}
 \item \textbf{Details of the Encryption Scheme}
 
 The design of a cryptosystem is based on the following two cryptography
-algorithms \textminus{} 
+algorithms \textminus{}
 \begin{enumerate}
 \item \textbf{Public Algorithms \textminus{}} With this option, all the
-details of the algorithm are in the public domain, known to everyone. 
-\item \textbf{Proprietary algorithms \textminus{} }The details of the algorithm
-are only known by the system designers and users. 
+details of the algorithm are in the public domain, known to everyone.
+\item \textbf{Proprietary Algorithms \textminus{} }The details of the algorithm
+are only known by the system designers and users.
 \end{enumerate}
 In case of proprietary algorithms, security is ensured through obscurity.
 Private algorithms may not be the strongest algorithms as they are
@@ -784,13 +787,13 @@ communicate with large number of known or unknown entities. Also,
 according to Kerckhoff's principle, the algorithm is preferred to
 be public with strength of encryption lying in the key. Thus, the
 first assumption about security environment is that the encryption
-algorithm is known to the attacker. 
+algorithm is known to the attacker.
 \item \textbf{Availability of Ciphertext}
 
 We know that once the plaintext is encrypted into ciphertext, it is
 put on unsecure public channel for transmission. Thus, the attacker
 can obviously assume that it has access to the ciphertext generated
-by the cryptosystem. 
+by the cryptosystem.
 \item \textbf{Availability of Plaintext and Ciphertext}
 
 This assumption is not as obvious as other. However, there may be
@@ -884,15 +887,15 @@ it is a collision and that hash function is said to be broken.
 \subsubsection{Man in Middle Attack (MIM)}
 
 The targets of this attack are mostly public key cryptosystems where
-key exchange is involved before communication takes place. 
+key exchange is involved before communication takes place.
 \begin{itemize}
 \item Host $\mathbb{A}$ wants to communicate to host $\mathbb{B}$, hence
 requests public key of $\mathbb{B}$.
 \item An attacker intercepts this request and sends his public key instead.
 \item Thus, whatever host $\mathbb{A}$ sends to host $\mathbb{B}$, the
-attacker is able to read. 
+attacker is able to read.
 \item In order to maintain communication, the attacker re-encrypts the data
-after reading with his public key and sends to $\mathbb{B}$. 
+after reading with his public key and sends to $\mathbb{B}$.
 \item The attacker sends his public key as $\mathbb{A}$'s public key so
 that $\mathbb{B}$ takes it as if it is taking it from $\mathbb{A}$.
 \end{itemize}
@@ -946,16 +949,16 @@ improvement.
 \subsubsection{Ancient Cryptosystems}
 
 Before proceeding further, we shall discuss some facts about historical
-cryptosystems: 
+cryptosystems:
 \begin{itemize}
-\item All of these systems are based on symmetric key encryption scheme. 
+\item All of these systems are based on symmetric key encryption scheme.
 \item The only security service these systems provide is confidentiality
-of information. 
+of information.
 \item Unlike modern systems which are digital and treat data as binary numbers,
-the earlier systems worked on alphabets as basic element. 
+the earlier systems worked on alphabets as basic element.
 \item These earlier cryptographic systems are also referred to as Ciphers.
 In general, a cipher is simply just a set of steps (an algorithm)
-for performing both an encryption, and the corresponding decryption. 
+for performing both an encryption, and the corresponding decryption.
 \end{itemize}
 
 \subsection{Shift Ciphers}
@@ -987,7 +990,7 @@ the sliding ruler underneath. The result of this process is depicted
 in the following illustration for an agreed shift of three positions.
 In this case, the plaintext \textbf{`EXAMPLE'} is encrypted to the
 ciphertext \textbf{`HADPSOH'}. Here is the ciphertext alphabet for
-a Shift of 3 : 
+a Shift of 3 :
 \end{itemize}
 \begin{center}
 {\scriptsize{}}%
@@ -1050,8 +1053,8 @@ be used for encoding and decoding.
 
 \paragraph{Algorithm}
 \begin{description}
-\item [{Encryption:}] $C\equiv E(P,k=13)\equiv(P+13)\bmod26$ 
-\item [{Decryption:}] $P\equiv D(C,k=13)\equiv(C-13)\bmod26$ 
+\item [{Encryption:}] $C\equiv E(P,k=13)\equiv(P+13)\bmod26$
+\item [{Decryption:}] $P\equiv D(C,k=13)\equiv(C-13)\bmod26$
 \end{description}
 
 \paragraph{Security Value : }
@@ -1070,13 +1073,13 @@ widely used in basic and beginner level cryptographic problems.} is a derivative
 letters, treats numbers and common symbols. Instead of using the sequence
 A--Z as the alphabet, ROT47 uses a larger set of characters from
 the common character encoding known as ASCII. Specifically, the 7-bit
-printable characters, excluding space, from decimal 33 '!' through
-126 '\textasciitilde ', 94 in total, taken in the order of the numerical
-values of their ASCII codes, are rotated by 47 positions, without
-special consideration of case. For example, the character A is mapped
-to p, while a is mapped to 2. The use of a larger alphabet produces
-a more thorough obfuscation than that of ROT13. On the other hand,
-because ROT47 introduces numbers and symbols into the mix without
+printable characters, excluding space, from decimal 33 `!' through
+126 `\textasciitilde ', 94 in total, taken in the order of the
+numerical values of their ASCII codes, are rotated by 47 positions,
+without special consideration of case. For example, the character
+A is mapped to p, while a is mapped to 2. The use of a larger alphabet
+produces a more thorough obfuscation than that of ROT13. On the other
+hand, because ROT47 introduces numbers and symbols into the mix without
 discrimination, it is more immediately obvious that the text has been
 enciphered.
 
@@ -1164,13 +1167,13 @@ This permutation is the secret key of the scheme.
 \begin{itemize}
 \item Take the alphabets A, B, C,$\:\ldots\:$, Z in the natural order. 
 \item The sender and the receiver decide on a randomly selected permutation
-of the letters of the alphabet. 
+of the letters of the alphabet.
 \item Underneath the natural order alphabets, write out the chosen permutation
 of the letters of the alphabet. For encryption, sender replaces each
 plaintext letters by substituting the permutation letter that is directly
 beneath it in the table. This process is shown in the following illustration.
 In this example, the chosen permutation is given below. The plaintext
-\textbf{`EXAMPLE'} is encrypted to \textbf{`TBQDHST'}. 
+\textbf{`EXAMPLE'} is encrypted to \textbf{`TBQDHST'}.
 \end{itemize}
 \begin{center}
 {\scriptsize{}}%
