@@ -2,8 +2,7 @@
 *.lyx
 *.lyx~
 *.lyx#
-# Compiled PDF and DjVu Files.
-*.pdf
+# Compiled DjVu Files.
 *.dvi
 # Configuration Files.
 *.bak
