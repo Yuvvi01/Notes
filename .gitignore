@@ -1,6 +1,10 @@
+# LyX files.
 *.lyx
-*.pdf
-*.bak
-*.ini
 *.lyx~
 *.lyx#
+# Compiled PDF and DjVu Files.
+*.pdf
+*.dvi
+# Configuration Files.
+*.bak
+*.ini
