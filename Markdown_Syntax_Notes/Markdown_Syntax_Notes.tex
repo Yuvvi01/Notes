@@ -12,12 +12,16 @@
  bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
  breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
  {hyperref}
+
 \makeatletter
+
 \providecommand\textquotedblplain{%
   \bgroup\addfontfeatures{RawFeature=-tlig}\char34\egroup}
+
 \fancyhead[RO]{\textsl{TABLE OF CONTENTS}}
 \fancyhead{}
 \fancyhead[RE,LO]{\leftmark}
+
 \AtBeginDocument{
   \def\labelitemi{\(\star\)}
 }
@@ -31,7 +35,7 @@
 \author{AGNI DATTA}
 
 \maketitle
-{\small{}\tableofcontents{}}{\small\par}
+\tableofcontents{}
 
 \pagebreak{}
 
@@ -60,7 +64,7 @@
 >> ## - Heading 2
 >> ### - Heading 3
 >> #### - Heading 4
->> #####.....N - Heading N
+>> ##### ... N - Heading N
 \end{verbatim}
 
 \subsection{Italics:}
@@ -128,10 +132,10 @@
 
 \subsection{Code Blocks:}
 \begin{verbatim}
->>  ''' (Language Syntax)
-	Code 
-	....................
-	'''
+>> ''' (Language Syntax)
+   Code 
+   ....................
+   '''
 \end{verbatim}
 
 \subsection{Tables:}
