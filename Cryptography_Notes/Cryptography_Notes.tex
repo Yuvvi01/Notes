@@ -15,20 +15,21 @@
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{microtype}
-\onehalfspacing
-\usepackage[unicode=true,pdfusetitle,
- bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
- breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
- {hyperref}
-\hypersetup{
- pdfborderstyle=}
-\makeatletter
 \providecommand{\tabularnewline}{\\}
 \usepackage{paralist}
+\onehalfspacing
+\usepackage[unicode=true,pdfusetitle, bookmarks=true,bookmarksnumbered=true,bookmarksopen=false, breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
+ {hyperref}
+\hypersetup{pdfborderstyle=}
+\makeatletter
 \@ifundefined{date}{}{\date{}}
 \usepackage{fancyhdr}
 \usepackage{babel}
 \usepackage{array}
+% theme of the document
+%\usepackage{draculatheme}
+%\color{draculagreen}
+% remove the comment symbols in the above lines
 \providecommand{\tabularnewline}{\\}
 \@addtoreset{section}{part}
 \usepackage[nobottomtitles*]{titlesec}
@@ -47,7 +48,7 @@
 
 \begin{document}
 \title{\textbf{\Huge{}CRYPTOGRAPHY}}
-\author{AGNI DATTA}
+\author{AGNI DATTA\thanks{I am a research oriented cyber-security student. Reach me at https://github.com/datta-agni}}
 \maketitle
 \begin{center}
 \rule[0.5ex]{0.5\columnwidth}{0.75pt} 
@@ -76,7 +77,7 @@ widespread development of computer communications. In data and telecommunication
 cryptography is necessary when communicating over any untrusted medium,
 which includes just about any network, particularly the Internet.}{\normalsize\par}
 
- 
+\vfill{}
 \end{abstract}
 \pagebreak{}
 
@@ -1092,7 +1093,7 @@ key search.
 \vfill{}
 
 
-\subsection{Cryptanalysis of Mono-Alphabetic Substitution Cipher:}
+\subsection{Cryptanalysis of Mono-Alphabetic Substitution Cipher}
 
 \subsubsection{Frequency Analysis}
 
@@ -1190,7 +1191,33 @@ In this example, the chosen permutation is given below. The plaintext
 \item On receiving the ciphertext, the receiver, who also knows the randomly
 chosen permutation, replaces each ciphertext letter on the bottom
 row with the corresponding plaintext letter in the top row. The ciphertext
-\textbf{`TBQDHST'} is decrypted to \textbf{`EXAMPLE'}. 
+\textbf{`TBQDHST'} is decrypted to \textbf{`EXAMPLE'}.
 \end{itemize}
 
+\paragraph*{Security Value:}
+
+Simple Substitution Cipher is a considerable improvement over the
+Caesar Cipher. The possible number of keys is large (26!) and even
+the modern computing systems are not yet powerful enough to comfortably
+launch a brute force attack to break the system. However, the Simple
+Substitution Cipher has a simple design and it is prone to design
+flaws, say choosing obvious permutation, this cryptosystem can be
+easily broken.
+
+\subsection{Monoalphabetic and Polyalphabetic Cipher}
+
+Monoalphabetic cipher is a substitution cipher in which for a given
+key, the cipher alphabet for each plain alphabet is fixed throughout
+the encryption process. For example, if ‘A’ is encrypted as ‘D’, for
+any number of occurrence in that plaintext, ‘A’ will always get encrypted
+to ‘D’.
+
+All of the substitution ciphers we have discussed earlier in this
+chapter are monoalphabetic; these ciphers are highly susceptible to
+cryptanalysis.
+
+Polyalphabetic Cipher is a substitution cipher in which the cipher
+alphabet for the plain alphabet may be different at different places
+during the encryption process. The next two examples, playfair and
+Vigenere Cipher are polyalphabetic ciphers.
 \end{document}
