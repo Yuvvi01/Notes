@@ -1,5 +1,7 @@
-\documentclass[british]{article}
+% Please install Montserrat Font from Google Fonts and Jetbrains Mono from Jetbrains.
+\documentclass[12pt,british]{article}
 \usepackage{fontspec}
+\setsansfont[Ligatures=TeX]{Montserrat}
 \setmonofont{JetBrains Mono Medium}
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
@@ -8,26 +10,23 @@
 \usepackage{setspace}
 \usepackage{microtype}
 \onehalfspacing
-\usepackage[unicode=true,pdfusetitle,
- bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
- breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
+\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
  {hyperref}
-
 \makeatletter
-
 \providecommand\textquotedblplain{%
   \bgroup\addfontfeatures{RawFeature=-tlig}\char34\egroup}
-
+\@ifundefined{date}{}{\date{}}
 \fancyhead[RO]{\textsl{TABLE OF CONTENTS}}
 \fancyhead{}
-\fancyhead[RE,LO]{\leftmark}
-
+\fancyhead[RE,LO]{\rightmark}
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+\renewcommand{\familydefault}{\sfdefault}
 \AtBeginDocument{
   \def\labelitemi{\(\star\)}
 }
 
 \makeatother
-
 \usepackage{polyglossia}
 \setdefaultlanguage[variant=british]{english}
 \begin{document}
@@ -37,13 +36,14 @@
 \maketitle
 \tableofcontents{}
 
-\pagebreak{}
+\newpage{}
 
 \section{Markdown:}
 \begin{itemize}
 \item Lightweight Markup language with a plain text formatting syntax.
 \item No tags. 
-\item Can be easily converted into HTML/XHTML/\LaTeX\: and other formats.
+\item Can be easily converted into HTML/XHTML/\LaTeX\: and other formats
+with pandoc.
 \item It is extremely readable, understandable and easily edited.
 \item WYSISYG type format with a few formatting options.
 \item Highly portable.
