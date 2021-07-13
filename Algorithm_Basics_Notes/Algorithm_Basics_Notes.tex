@@ -1,19 +1,24 @@
-\documentclass[10pt,british]{article}
+\documentclass[british]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{luainputenc}
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 \usepackage{babel}
 \usepackage{setspace}
 \usepackage{microtype}
 \onehalfspacing
-\usepackage[unicode=true,pdfusetitle,
- bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
- breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
+\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
  {hyperref}
 \makeatletter
 \@ifundefined{date}{}{\date{}}
+\fancyhead[RO]{\textsl{TABLE OF CONTENTS}}
+\fancyhead{}
+\fancyhead[RE,LO]{\leftmark}
 \usepackage{fontspec}
+\usepackage[nobottomtitles*]{titlesec}
+
 \AtBeginDocument{
   \def\labelitemi{\large\(\star\)}
 }
@@ -26,11 +31,13 @@
 
 \begin{document}
 \title{\textbf{\huge{}INTRODUCTION TO ALGORITHMS AND PROBLEM SOLVING}}
-\author{AGNI DATTA}
+\author{AGNI DATTA\thanks{I am a research oriented cyber-security student. Visit me at https://github.com/datta-agni}}
 \maketitle
 \begin{center}
 \rule[0.5ex]{0.5\columnwidth}{0.5pt}
 \par\end{center}
+
+\vfill{}
 
 \pagebreak{}
 
