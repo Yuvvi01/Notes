@@ -4,6 +4,8 @@
 *.lyx#
 # Compiled DjVu Files.
 *.dvi
-# Configuration Files.
+# Configuration and Backup Files.
 *.bak
 *.ini
+*.bak0
+*.log
