@@ -1,4 +1,4 @@
-% Please install Montserrat Font from Google Fonts and Jetbrains Mono from Jetbrains.
+% Please install Montserrat Sans Font from Google Font and JetBrains Mono FOnt from JetBrains websites.
 \documentclass[12pt,british]{article}
 \usepackage{fontspec}
 \setsansfont[Ligatures=TeX]{Montserrat}
@@ -12,145 +12,170 @@
 \onehalfspacing
 \usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
  {hyperref}
+
 \makeatletter
+
 \providecommand\textquotedblplain{%
   \bgroup\addfontfeatures{RawFeature=-tlig}\char34\egroup}
+
 \@ifundefined{date}{}{\date{}}
+
 \fancyhead[RO]{\textsl{TABLE OF CONTENTS}}
 \fancyhead{}
 \fancyhead[RE,LO]{\rightmark}
 \usepackage{sectsty}
 \allsectionsfont{\sffamily}
-\renewcommand{\familydefault}{\sfdefault}
+
 \AtBeginDocument{
   \def\labelitemi{\(\star\)}
 }
 
 \makeatother
+
 \usepackage{polyglossia}
 \setdefaultlanguage[variant=british]{english}
 \begin{document}
-\title{\textbf{MARKDOWN NOTES}}
+\title{\textsf{\textbf{MARKDOWN NOTES}}}
 \author{AGNI DATTA}
-
 \maketitle
+\begin{center}
+	\rule[0.5ex]{0.5\columnwidth}{0.5pt}
+	\par\end{center}
+
 \tableofcontents{}
 
 \newpage{}
 
+\vfill{}
+
+
 \section{Markdown:}
 \begin{itemize}
-\item Lightweight Markup language with a plain text formatting syntax.
-\item No tags. 
-\item Can be easily converted into HTML/XHTML/\LaTeX\: and other formats
-with pandoc.
-\item It is extremely readable, understandable and easily edited.
-\item WYSISYG type format with a few formatting options.
-\item Highly portable.
+	\item Lightweight Markup language with a plain text formatting syntax.
+	\item No tags.
+	\item Can be easily converted into HTML/\LaTeX /RTF\: and other formats
+	      with Pandoc\footnote{For more information visit https://pandoc.org/}.
+	\item It is extremely readable, understandable and easily edited.
+	\item WYSISYM (What You See Is What You Mean) type, with formatting options.
+	\item Highly portable and easy to understand.
 \end{itemize}
 
 \section{Uses of Markdown:}
 \begin{itemize}
-\item Technical Documentation.
-\item Posts in websites.
-\item Used in static sites generators.
+	\item Technical Documentation.
+	\item Posts in websites.
+	\item Used in static sites generators.
 \end{itemize}
+\vfill{}
+
+\pagebreak{}
 
 \section{Basic Formatting:}
 
 \subsection{Headings:}
-\begin{verbatim}
->> # - Heading 1
->> ## - Heading 2
->> ### - Heading 3
->> #### - Heading 4
->> ##### ... N - Heading N
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > \# - Heading 1}
+
+\noindent \texttt{>\textcompwordmark > \#\# - Heading 2}
+
+\noindent \texttt{>\textcompwordmark > \#\#\# - Heading 3}
+
+\noindent \texttt{>\textcompwordmark > \#\#\#\# - Heading 4}
+
+\noindent \texttt{>\textcompwordmark > \#\#\#\#\# ... N - Heading
+	N}
 
 \subsection{Italics:}
-\begin{verbatim}
->> *Text Inside Will Be Italics*
->> _Text Inside Will Be Italics_
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > {*}Text Inside Will Be Italics{*}}
+
+\noindent \texttt{>\textcompwordmark > \_Text Inside Will Be Italics\_}
 
 \subsection{Strong Text:}
-\begin{verbatim}
->> **Text Inside Will Be Strong**
->> __Text Inside Will Be Strong__
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > {*}{*}Text Inside Will Be
+	Strong{*}{*}}
+
+\noindent \texttt{>\textcompwordmark > \_\_Text Inside Will Be Strong\_\_}
 
 \subsection{Strike-trough Text:}
-\begin{verbatim}
->> ~~Text Inside Will Be Stroked Out~~
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > \textasciitilde\textasciitilde Text
+	Inside Will Be Stroked Out\textasciitilde\textasciitilde}
 
 \subsection{Horizontal Rule:}
-\begin{verbatim}
->> - - -
->> ____
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > - - -}
+
+\noindent \texttt{>\textcompwordmark > \_\_\_\_}
 
 \subsection{Escape Sequence for Special Character:}
-\begin{verbatim}
->> /Special Sequence/
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > /Special Sequence/}
 
 \subsection{Block Quote Text:}
-\begin{verbatim}
->> >This Is A Quote
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > >This Is A Quote}
 
 \subsection{Link Text:}
-\begin{verbatim}
->> [Name Of The Link]{Actual Link "Title Of The Link"}
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > {[}Name Of The Link{]}\{Actual
+Link \textquotedbl Title Of The Link\textquotedbl\}}
 
 \subsection{Unordered List:}
-\begin{verbatim}
->> * Point 1
->> * Point 2
-         * Nested Point 1
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > {*} Point 1}
+
+\noindent \texttt{\qquad{}\qquad{}\qquad{}{*} Nested Point 1}
+
+\noindent \texttt{>\textcompwordmark > {*} Point 2}
 
 \subsection{Ordered List:}
-\begin{verbatim}
->> 1. Item 1
->> 2. Item 2
->> 3. Item 3
->> 4. Item 4
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > 1. Item 1}
+
+\noindent \texttt{>\textcompwordmark > 2. Item 2}
+
+\noindent \texttt{>\textcompwordmark > 3. Item 3}
+
+\noindent \texttt{>\textcompwordmark > 4. Item 4}
 
 \subsection{Inline Code Block:}
-\begin{verbatim}
->> '<p> This Is A Paragraph <p>'
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > '<p> This Is A Paragraph <p>'}
 
 \subsection{Image:}
-\begin{verbatim}
->> ![Image Name] (Location Of The Image)
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > !{[}Image Name{]} (Location
+Of The Image)}
 
 \subsection{Code Blocks:}
-\begin{verbatim}
->> ''' (Language Syntax)
-   Code 
-   ....................
-   '''
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > \texttt{\:}''' (Language
+	Syntax)}
+
+\noindent \texttt{\qquad{}Code }
+
+\noindent \texttt{\qquad{}....................}
+
+\noindent \texttt{\qquad{}'''}
 
 \subsection{Tables:}
-\begin{verbatim}
->>  | Column 1 | Column 2 |
->>  | -------- | -------- |
->>  | Data     | Data     |
->>  | Data     | Data     |
-\end{verbatim}
+
+\noindent \texttt{>\textcompwordmark > | Column 1 | Column 2 |}
+
+\noindent \texttt{>\textcompwordmark > | -{}-{}-{}-{}-{}-{}-{}- |
+-{}-{}-{}-{}-{}-{}-{}- |}
+
+\noindent \texttt{>\textcompwordmark > | 'Data 1' | 'Data 2' |}
+
+\noindent \texttt{>\textcompwordmark > | 'Data 1' | 'Data 3' |}
 
 \subsection{Task Lists:}
-\begin{verbatim}
->> * [X] Task 1
->> * [X] Task 2
->> * [ ] Task 3
-\end{verbatim}
 
+\noindent \texttt{>\textcompwordmark > {*} {[}X{]} Task 1}
+
+\noindent \texttt{>\textcompwordmark > {*} {[}X{]} Task 2}
+
+\noindent \texttt{>\textcompwordmark > {*} {[} {]} Task 3}
 \end{document}

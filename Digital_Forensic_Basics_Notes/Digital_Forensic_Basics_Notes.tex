@@ -42,32 +42,32 @@
 \medskip{}
 
 \title{\textbf{\Huge{}LECTURE NOTES ON DIGITAL FORENSICS}{\Huge{}\vfill{}
-}Digital Forensics}
+	}Digital Forensics}
 \author{{\LARGE{}\vspace{1.5cm}
-}\textbf{\LARGE{}AGNI DATTA}}
+		}\textbf{\LARGE{}AGNI DATTA}}
 \maketitle
 \begin{center}
-{\LARGE{}\vfill{}
-}{\LARGE\par}
-\par\end{center}
+	{\LARGE{}\vfill{}
+	}{\LARGE\par}
+	\par\end{center}
 
 \begin{center}
-{\Huge{}\rule[0.5ex]{0.5\columnwidth}{0.5pt}}{\Huge\par}
-\par\end{center}
+	{\Huge{}\rule[0.5ex]{0.5\columnwidth}{0.5pt}}{\Huge\par}
+	\par\end{center}
 
 \begin{center}
-{\LARGE{}Lecture Notes collected from classes of Dr. Shishir Kumar
-Shandilya}\\
-{\LARGE{} DIGITAL FORENSICS}{\LARGE\par}
-\par\end{center}
+	{\LARGE{}Lecture Notes collected from classes of Dr. Shishir Kumar
+		Shandilya}\\
+	{\LARGE{} DIGITAL FORENSICS}{\LARGE\par}
+	\par\end{center}
 
 \begin{center}
-{\LARGE{}\vfill{}
-}{\Large{}SCHOOL OF COMPUTER SCIENCE}\\
-{\Large{} VELLORE INSTITUTE OF TECHNOLOGY}\\
-{\Large{} \vfill{}
-}\pagebreak\tableofcontents{}
-\par\end{center}
+	{\LARGE{}\vfill{}
+	}{\Large{}SCHOOL OF COMPUTER SCIENCE}\\
+	{\Large{} VELLORE INSTITUTE OF TECHNOLOGY}\\
+	{\Large{} \vfill{}
+	}\pagebreak\tableofcontents{}
+	\par\end{center}
 
 \newpage{}
 
@@ -121,12 +121,12 @@ Dr. Edmond Locard (13 December 1877 -- 4 April 1966) was a pioneer
 in forensic science who became known as the \textquotedbl Sherlock
 Holmes of France\textquotedbl . He formulated the basic principle
 of forensic science: \textquotedbl\textcolor{red}{Every contact leaves
-a trace}\textquotedbl .
+	a trace}\textquotedbl .
 
 This became known as Locard's exchange principle. ``\textcolor{red}{Anyone,
-or anything that enters in the crime scene takes something from the
-crime scene with them and leaves something behind, and that both can
-be used as forensic evidence}''. Crime reconstruction involves examining
+	or anything that enters in the crime scene takes something from the
+	crime scene with them and leaves something behind, and that both can
+	be used as forensic evidence}''. Crime reconstruction involves examining
 the available physical evidence, those materials left at or removed
 from the scene, victim, or offender, for example fingerprints. These
 forensically established contacts are then considered in light of
@@ -141,9 +141,9 @@ established facts of the case.
 
 \paragraph{Following are the cardinal rules of the Digital Forensics:}
 \begin{itemize}
-\item Never mishandle the evidence.
-\item Never trust the subject machine or Operating system.
-\item Never work on the original evidence.
+	\item Never mishandle the evidence.
+	\item Never trust the subject machine or Operating system.
+	\item Never work on the original evidence.
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
@@ -156,37 +156,37 @@ seized and secured for examination.
 
 Digital evidence:
 \begin{itemize}
-\item Is latent (hidden), like fingerprints or DNA evidence,
-\item Crosses jurisdictional borders quickly and easily,
-\item Can be altered, damaged or destroyed with little effort,
-\item Can be time sensitive.
+	\item Is latent (hidden), like fingerprints or DNA evidence,
+	\item Crosses jurisdictional borders quickly and easily,
+	\item Can be altered, damaged or destroyed with little effort,
+	\item Can be time sensitive.
 \end{itemize}
 \begin{description}
-\item [{Admissibility:}] Digital evidence is often ruled inadmissible by
-courts because it was obtained without authorization. In most jurisdictions
-a warrant is required to seize and investigate digital devices. In
-a digital investigation this can present problems where, for example,
-evidence of other crimes are identified while investigating another.
-Authentication: As with any evidence, the proponent of digital evidence
-must lay the proper foundation. Courts largely concerned themselves
-with the reliability of such digital evidence. Best evidence rule
-is a legal principle that holds an original copy of a document as
-superior evidence. The rule specifies that secondary evidence, such
-as a copy or facsimile, will be not admissible if an original document
-exists and can be obtained. \textquotedbl Secondary evidence\textquotedbl{}
-or copies of the content in the original document can be admitted
-as evidence. The best evidence rule is only applied in situations
-in which a party attempts to substantiate a non-original document
-submitted as evidence during a trial. Admissibility of documents before
-state court systems may vary. 
+	\item [{Admissibility:}] Digital evidence is often ruled inadmissible by
+	      courts because it was obtained without authorization. In most jurisdictions
+	      a warrant is required to seize and investigate digital devices. In
+	      a digital investigation this can present problems where, for example,
+	      evidence of other crimes are identified while investigating another.
+	      Authentication: As with any evidence, the proponent of digital evidence
+	      must lay the proper foundation. Courts largely concerned themselves
+	      with the reliability of such digital evidence. Best evidence rule
+	      is a legal principle that holds an original copy of a document as
+	      superior evidence. The rule specifies that secondary evidence, such
+	      as a copy or facsimile, will be not admissible if an original document
+	      exists and can be obtained. \textquotedbl Secondary evidence\textquotedbl{}
+	      or copies of the content in the original document can be admitted
+	      as evidence. The best evidence rule is only applied in situations
+	      in which a party attempts to substantiate a non-original document
+	      submitted as evidence during a trial. Admissibility of documents before
+	      state court systems may vary.
 \end{description}
 Digital Evidence should be the following:
 \begin{itemize}
-\item Admissible: Conform to legal requirements,
-\item Authentic: Relevant to the case,
-\item Complete: Not just extracts
-\item Reliable: Collected and Handled appropriately,
-\item Believable and understandable.
+	\item Admissible: Conform to legal requirements,
+	\item Authentic: Relevant to the case,
+	\item Complete: Not just extracts
+	\item Reliable: Collected and Handled appropriately,
+	\item Believable and understandable.
 \end{itemize}
 
 \subsection{Legal Issues:}
@@ -200,39 +200,39 @@ tampered evidence and court can not accept it as an admissible evidence.
 \subsection{Types of Digital Evidence:}
 
 \subsubsection{Volatile (Non-persistent) Memory that loses its contents, as soon
-as power is turned off; e.g. Data stored in RAM (semiconductor storage)
-(System BIOS: CMOS RAM - battery powered) }
+	as power is turned off; e.g. Data stored in RAM (semiconductor storage)
+	(System BIOS: CMOS RAM - battery powered) }
 
 \subsubsection{Non-volatile (Persistent) No change in contents, even if power is
-turned off; e.g. Data stored in a tape / hard disk (magnetic storage),
-CD / DVD (optical storage), data cards, USB Thumb Drives -- Flash
-memory).}
+	turned off; e.g. Data stored in a tape / hard disk (magnetic storage),
+	CD / DVD (optical storage), data cards, USB Thumb Drives -- Flash
+	memory).}
 
 \subsection{Order of Volatility:}
 
 Higher Volatility to Lower Volatility List:
 \begin{enumerate}
-\item Registers \& Cache
-\item Routing Tables
-\item ARP Cache
-\item Process Table
-\item Kernel Statistics \& Modules
-\item Main Memory (RAM)
-\item Temporary System files
-\item Secondary Memory
-\item Router Configuration
-\item Network Topology
+	\item Registers \& Cache
+	\item Routing Tables
+	\item ARP Cache
+	\item Process Table
+	\item Kernel Statistics \& Modules
+	\item Main Memory (RAM)
+	\item Temporary System files
+	\item Secondary Memory
+	\item Router Configuration
+	\item Network Topology
 \end{enumerate}
 
 \subsection{Importance of Order of Volatility:}
 
 Current running state and system configuration details.
 \begin{itemize}
-\item Activities performed/ In progress
-\item Root cause of the incident
-\item Timeline of the incident
-\item Time, date, user responsible for the incident
-\item Network connection details
+	\item Activities performed/ In progress
+	\item Root cause of the incident
+	\item Timeline of the incident
+	\item Time, date, user responsible for the incident
+	\item Network connection details
 \end{itemize}
 Once system is shutdown / rebooted volatile data is lost for ever.
 
@@ -242,21 +242,21 @@ Once system is shutdown / rebooted volatile data is lost for ever.
 
 \subsection{Order of Handling Data In Crime Scene:}
 \begin{itemize}
-\item Document the Crime Scene - OS (Version),
-\item BIOS date \& time (and difference, if any),
-\item H/W and S/W Configuration,
-\item IP / MAC address,
-\item Computer System : Shutdown / Power Off ? 
-\item Identify Evidence \& Authenticate through a Hashing Algorithm (MD5),
-\item Always make the bit-stream copy (forensic image) of the seized storage
-media,
-\item Label all the connecting cables and photograph them,
-\item Document the chain of custody,
-\item Preserve the evidence before packing for transportation,
-\item Securely pack \& transport the evidence to lab,
-\item Store the seized evidence in a protected storage (air bubbled PVC,
-anti-static bag),
-\item Transfer the Computer System to a secure location.
+	\item Document the Crime Scene - OS (Version),
+	\item BIOS date \& time (and difference, if any),
+	\item H/W and S/W Configuration,
+	\item IP / MAC address,
+	\item Computer System : Shutdown / Power Off ?
+	\item Identify Evidence \& Authenticate through a Hashing Algorithm (MD5),
+	\item Always make the bit-stream copy (forensic image) of the seized storage
+	      media,
+	\item Label all the connecting cables and photograph them,
+	\item Document the chain of custody,
+	\item Preserve the evidence before packing for transportation,
+	\item Securely pack \& transport the evidence to lab,
+	\item Store the seized evidence in a protected storage (air bubbled PVC,
+	      anti-static bag),
+	\item Transfer the Computer System to a secure location.
 \end{itemize}
 
 \subsubsection{Document Everything:}
@@ -304,18 +304,18 @@ or on the Internet) is done.
 
 \subparagraph{Examples:}
 \begin{itemize}
-\item Main unit, usually the box to which the monitor and keyboard are attached. 
-\item Monitor, keyboard and mouse (only necessary in certain cases.) 
-\item Power supply units. 
-\item Hard disks not inside the computer. 
-\item Dongles 
-\item Modems (some contain phone numbers). 
-\item External drives and other external devices. 
-\item Routers. 
-\item Digital cameras. 
-\item Back up tapes. 
-\item CDs/ DVDs. 
-\item Memory sticks, memory cards and all USB connected devices. 
+	\item Main unit, usually the box to which the monitor and keyboard are attached.
+	\item Monitor, keyboard and mouse (only necessary in certain cases.)
+	\item Power supply units.
+	\item Hard disks not inside the computer.
+	\item Dongles
+	\item Modems (some contain phone numbers).
+	\item External drives and other external devices.
+	\item Routers.
+	\item Digital cameras.
+	\item Back up tapes.
+	\item CDs/ DVDs.
+	\item Memory sticks, memory cards and all USB connected devices.
 \end{itemize}
 
 \subsubsection{Document The Scene:}
@@ -330,17 +330,17 @@ is presented in court.
 
 It is essential that any items of evidence can be traced from the
 crime scene to the court room, and everywhere in between, known as
-\textcolor{red}{CHAIN OF CUSTODY}. 
+\textcolor{red}{CHAIN OF CUSTODY}.
 \begin{itemize}
-\item Positive control is the phrase most often used to describe the standard
-of care taken in the handling of potential evidentiality material
-(e.g., suspect computer systems, hard drives, and any backup copies). 
-\item Who handled the evidence? 
-\item What procedures were performed on the evidence? 
-\item When was the evidence collected and/or transferred to another party? 
-\item Where was the evidence collected and stored? 
-\item How was the evidence collected and stored? 
-\item For what purpose was the evidence collected? 
+	\item Positive control is the phrase most often used to describe the standard
+	      of care taken in the handling of potential evidentiality material
+	      (e.g., suspect computer systems, hard drives, and any backup copies).
+	\item Who handled the evidence?
+	\item What procedures were performed on the evidence?
+	\item When was the evidence collected and/or transferred to another party?
+	\item Where was the evidence collected and stored?
+	\item How was the evidence collected and stored?
+	\item For what purpose was the evidence collected?
 \end{itemize}
 
 \subsubsection{Acquire The Evidence:}
@@ -384,10 +384,10 @@ scale and before and after packaging.
 
 \paragraph{Communities working in Digital Forensics:}
 \begin{itemize}
-\item Law Enforcement (i.e. Police) 
-\item Military/Intelligence
-\item Business \& Industry 
-\item Academia/Researchers 
+	\item Law Enforcement (i.e. Police)
+	\item Military/Intelligence
+	\item Business \& Industry
+	\item Academia/Researchers
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
@@ -398,28 +398,28 @@ scale and before and after packaging.
 
 \paragraph*{Digital forensics can be used in a variety of settings, including}
 \begin{itemize}
-\item Criminal Investigations 
-\item Civil Litigation 
-\item Intelligence 
-\item Administrative Matters 
+	\item Criminal Investigations
+	\item Civil Litigation
+	\item Intelligence
+	\item Administrative Matters
 \end{itemize}
 
 \subsection{Criminal Investigation:}
 
 \paragraph{In today\textquoteright s digital world, electronic evidence can
-be found in almost any criminal investigation conducted. }
+	be found in almost any criminal investigation conducted. }
 \begin{itemize}
-\item Homicide, physical assault, robbery, and burglary are just a few of
-the many examples of ``analogue'' crimes that can leave digital
-evidence. 
-\item One of the major struggles in law enforcement is to change the paradigm
-of the police and get them to think of and seek out digital evidence. 
-\item Everyday digital devices such as cell phones and gaming consoles can
-hold a treasure trove of evidence. 
-\item Unfortunately, none of that evidence will ever see a courtroom if
-it's not first recognized and collected. 
-\item As time moves on and our law enforcement agencies are replenished
-with ``younger blood,'' this will become less and less of a problem. 
+	\item Homicide, physical assault, robbery, and burglary are just a few of
+	      the many examples of ``analogue'' crimes that can leave digital
+	      evidence.
+	\item One of the major struggles in law enforcement is to change the paradigm
+	      of the police and get them to think of and seek out digital evidence.
+	\item Everyday digital devices such as cell phones and gaming consoles can
+	      hold a treasure trove of evidence.
+	\item Unfortunately, none of that evidence will ever see a courtroom if
+	      it's not first recognized and collected.
+	\item As time moves on and our law enforcement agencies are replenished
+	      with ``younger blood,'' this will become less and less of a problem.
 \end{itemize}
 
 \subsection{Civil Litigation:}
@@ -458,26 +458,26 @@ are struggling to deal with this new reality.
 
 \subsection{Intelligence:}
 \begin{itemize}
-\item Terrorists and foreign governments, the purview of our intelligence
-agencies, have also joined the digital age. 
-\item Terrorists have been using information technology to communicate,
-recruit, and plan attacks. 
-\item The armed forces are exploiting intelligence collected from digital
-devices brought straight from the battlefield. 
-\item This process is known as DOMEX (Document and Media Exploitation). 
-\item DOMEX is paying large dividends, providing actionable intelligence
-to support the soldiers on the ground army. 
+	\item Terrorists and foreign governments, the purview of our intelligence
+	      agencies, have also joined the digital age.
+	\item Terrorists have been using information technology to communicate,
+	      recruit, and plan attacks.
+	\item The armed forces are exploiting intelligence collected from digital
+	      devices brought straight from the battlefield.
+	\item This process is known as DOMEX (Document and Media Exploitation).
+	\item DOMEX is paying large dividends, providing actionable intelligence
+	      to support the soldiers on the ground army.
 \end{itemize}
 
 \subsection{Administrative Matters:}
 \begin{itemize}
-\item Digital evidence can also be valuable for incidents other than litigation
-and matters of national security. 
-\item Violations of policy and procedure often involve some type of electronically
-stored information, for example, an employee operating a personal
-side business, using company computers while on company time. 
-\item That may not constitute a violation of the law, but it may warrant
-an investigation by the company. 
+	\item Digital evidence can also be valuable for incidents other than litigation
+	      and matters of national security.
+	\item Violations of policy and procedure often involve some type of electronically
+	      stored information, for example, an employee operating a personal
+	      side business, using company computers while on company time.
+	\item That may not constitute a violation of the law, but it may warrant
+	      an investigation by the company.
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
@@ -486,34 +486,34 @@ an investigation by the company.
 
 \section{Role of The Forensic Examiner in The Judicial System:}
 \begin{itemize}
-\item The digital forensics practitioner most often plays the role of an
-expert witness. 
-\item What makes them different than non expert witnesses? Other witnesses
-can only testify to what they did or saw. They are generally limited
-to those areas and not permitted to render an opinion. 
-\item Experts, by contrast, can and often do give their opinion. What makes
-someone an ``expert?'' In the legal sense, it's someone who can
-assist the judge or jury to understand and interpret evidence they
-may be unfamiliar with. 
-\item To be considered an expert in a court of law, one does not have to
-possess an advanced academic degree. 
-\item An expert simply must know more about a particular subject than the
-average lay person. 
-\item Under the legal definition, a doctor, scientist, baker, or garbage
-collector could be qualified as an expert witness in a court of law.
-Individuals are qualified as experts by the court based on their training,
-experience, education, and so on. 
+	\item The digital forensics practitioner most often plays the role of an
+	      expert witness.
+	\item What makes them different than non expert witnesses? Other witnesses
+	      can only testify to what they did or saw. They are generally limited
+	      to those areas and not permitted to render an opinion.
+	\item Experts, by contrast, can and often do give their opinion. What makes
+	      someone an ``expert?'' In the legal sense, it's someone who can
+	      assist the judge or jury to understand and interpret evidence they
+	      may be unfamiliar with.
+	\item To be considered an expert in a court of law, one does not have to
+	      possess an advanced academic degree.
+	\item An expert simply must know more about a particular subject than the
+	      average lay person.
+	\item Under the legal definition, a doctor, scientist, baker, or garbage
+	      collector could be qualified as an expert witness in a court of law.
+	      Individuals are qualified as experts by the court based on their training,
+	      experience, education, and so on.
 \end{itemize}
 
 \subsection{What separates a qualified expert from a truly effective one? }
 \begin{itemize}
-\item It is their ability to communicate with the judge and jury. 
-\item They must be effective teachers. 
-\item The vast majority of society lacks technical understanding to fully
-grasp this kind of testimony without at least some explanation. 
-\item Digital forensic examiners must carry out their duties without bias.
-Lastly, a digital forensics examiner must go where the evidence takes
-them without any preconceived notions. 
+	\item It is their ability to communicate with the judge and jury.
+	\item They must be effective teachers.
+	\item The vast majority of society lacks technical understanding to fully
+	      grasp this kind of testimony without at least some explanation.
+	\item Digital forensic examiners must carry out their duties without bias.
+	      Lastly, a digital forensics examiner must go where the evidence takes
+	      them without any preconceived notions.
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
@@ -558,29 +558,29 @@ activity.
 These areas are:
 
 \subsubsection{Collection, which has to do with searching for evidence, recognition
-and collection of evidence, and documenting the items of evidence.
-Always ensure the collection includes all of the available data and
-resources, such as the whole disk drive, not just the used portions.
-Always document the place, time, and circumstances of each data item
-collected for evidence.}
+	and collection of evidence, and documenting the items of evidence.
+	Always ensure the collection includes all of the available data and
+	resources, such as the whole disk drive, not just the used portions.
+	Always document the place, time, and circumstances of each data item
+	collected for evidence.}
 
 \subsubsection{Hardware evidence examination, which has to do with origins, significance,
-and visibility of evidence, often can reveal hidden or obscured information
-and documentation about the evidence. Dimensions, styles, sizes, and
-manufacturer of hard drives, other devices, or network items are all
-important evidence items.}
+	and visibility of evidence, often can reveal hidden or obscured information
+	and documentation about the evidence. Dimensions, styles, sizes, and
+	manufacturer of hard drives, other devices, or network items are all
+	important evidence items.}
 
 \subsubsection{Software and network evidence analysis, which is where the logs/records/software
-evidence is actually examined for the incident providing the significance
-criteria for inclusion and the probative value of the evidence. Always
-conduct this software and network analysis and interpretation separate
-from the hardware evidence examination.}
+	evidence is actually examined for the incident providing the significance
+	criteria for inclusion and the probative value of the evidence. Always
+	conduct this software and network analysis and interpretation separate
+	from the hardware evidence examination.}
 
 \subsubsection{Evidence reporting, it must be written documentation with the processes
-and procedures outlined and explained in detail in the reports. Pertinent
-facts and data recovered are the primary keys in the reports. Understand
-the documentation and reports will always be reviewed, critiqued,
-and maybe even cross-examined.}
+	and procedures outlined and explained in detail in the reports. Pertinent
+	facts and data recovered are the primary keys in the reports. Understand
+	the documentation and reports will always be reviewed, critiqued,
+	and maybe even cross-examined.}
 
 \pagebreak{}
 
@@ -658,7 +658,7 @@ of electronic evidence gets dismissed in itself.
 In India, there are no proper guidelines for the collection and acquisition
 of digital evidence. The investigating agencies and forensic laboratories
 are working on the guidelines of their own. Due to this, the potential
-of digital evidence has been destroyed. 
+of digital evidence has been destroyed.
 
 \subsubsection{Limitation of The Indian Evidence Act, 1872:}
 
@@ -680,7 +680,7 @@ and evidence presentation in court.
 \subsubsection{Admissibility In Courts:}
 
 Due to lack of proper polices, the data collected can be proven inadmissible
-if any fault is found in the process of data accumulation. 
+if any fault is found in the process of data accumulation.
 
 \subsubsection{Preservation of Electronic Evidence:}
 
@@ -730,8 +730,8 @@ difficulty in the identification of original and relevant data.
 
 \section{A Flow of Evidence Diagram:}
 \begin{center}
-\includegraphics[scale=0.5]{Pictures/DF} 
-\par\end{center}
+	\includegraphics[scale=0.5]{Pictures/DF}
+	\par\end{center}
 
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
@@ -760,65 +760,65 @@ and reconstitute services in a trusted manner.
 
 \section{Incident:}
 \begin{itemize}
-\item An action likely to lead to grave consequences like,
-\item Data loss may lead to commercial loss.
-\item Confidentiality breached.
-\item Political issues.
-\item Network breakdown lead to service and information flow disruption.
+	\item An action likely to lead to grave consequences like,
+	\item Data loss may lead to commercial loss.
+	\item Confidentiality breached.
+	\item Political issues.
+	\item Network breakdown lead to service and information flow disruption.
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
 \section{Response:}
 \begin{itemize}
-\item An act of responding.
-\item Something constituting a reply or a reaction.
-\item The activity or inhibition of previous activity or any of its parts
-resulting from stimulation
-\item The output of a transducer or detecting device resulting from a given
-input.
-\item Ideally Incident Response would be a set of policies that allow an
-individual or individuals to react to an incident in an efficient
-and professional manner thereby decreasing the likelihood of grave
-consequences.
+	\item An act of responding.
+	\item Something constituting a reply or a reaction.
+	\item The activity or inhibition of previous activity or any of its parts
+	      resulting from stimulation
+	\item The output of a transducer or detecting device resulting from a given
+	      input.
+	\item Ideally Incident Response would be a set of policies that allow an
+	      individual or individuals to react to an incident in an efficient
+	      and professional manner thereby decreasing the likelihood of grave
+	      consequences.
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
 \section{ISO 17799}
 \begin{itemize}
-\item Outlines Comprehensive Incident Response and Internal Investigation
-Procedures
-\item Detailed Provisions on Computer Evidence Preservation and Handling
+	\item Outlines Comprehensive Incident Response and Internal Investigation
+	      Procedures
+	\item Detailed Provisions on Computer Evidence Preservation and Handling
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
 \section{Purpose of Incident Response:}
 \begin{itemize}
-\item Minimize overall impact.
-\item Hide from public scrutiny.
-\item Stop further progression.
-\item Involve Key personnel.
-\item Control situation.
+	\item Minimize overall impact.
+	\item Hide from public scrutiny.
+	\item Stop further progression.
+	\item Involve Key personnel.
+	\item Control situation.
 \end{itemize}
 
 \subsection{Minimize overall impact through,}
 \begin{itemize}
-\item Recover Quickly \& Efficiently.
-\item Respond as if going to prosecute.
-\item If possible replace system with new one.
-\item Priority one, business back to normal.
-\item Ensure all participants are notified.
-\item Minimize overall impact.
-\item Recover Quickly \& Efficiently.
-\item Secure System.
-\item Lock down all known avenues of attack.
-\item Assess system for unseen vulnerabilities.
-\item Implement proper auditing.
-\item Implement new security measures.
-\item Follow-up (A continuous process)
-\item Ensure that all systems are secure.
-\item Continue prosecution.
-\item Securely store all evidence and notes.
-\item Distribute lessons learned.
+	\item Recover Quickly \& Efficiently.
+	\item Respond as if going to prosecute.
+	\item If possible replace system with new one.
+	\item Priority one, business back to normal.
+	\item Ensure all participants are notified.
+	\item Minimize overall impact.
+	\item Recover Quickly \& Efficiently.
+	\item Secure System.
+	\item Lock down all known avenues of attack.
+	\item Assess system for unseen vulnerabilities.
+	\item Implement proper auditing.
+	\item Implement new security measures.
+	\item Follow-up (A continuous process)
+	\item Ensure that all systems are secure.
+	\item Continue prosecution.
+	\item Securely store all evidence and notes.
+	\item Distribute lessons learned.
 \end{itemize}
 
 \subsection{Identifying False Positives:}
@@ -830,13 +830,13 @@ happened:
 \subsubsection{TRUE POSITIVES: Something bad happened, and the system caught it.}
 
 \subsubsection{TRUE NEGATIVES: The activity is benign (gentle, kind), and no alert
-has been generated.}
+	has been generated.}
 
 \subsubsection{FALSE POSITIVES: The system alerts, but the activity was not actually
-malicious.}
+	malicious.}
 
 \subsubsection{FALSE NEGATIVES: Something bad happened, but the system did not catch
-it.}
+	it.}
 
 Tools do not always alert when something bad happens, and just because
 they throw an alarm does not necessarily mean it is time to isolate
@@ -851,12 +851,12 @@ does not mean that the Web server was actually hacked.
 
 \section{Signal to Noise Ratio:}
 \begin{quotation}
-\noindent \begin{center}
-\textcolor{red}{\LARGE{}EVERY ALERT IS IMPORTANT}{\LARGE\par}
-\par\end{center}
-\begin{center}
- 
-\par\end{center}
+	\noindent \begin{center}
+		\textcolor{red}{\LARGE{}EVERY ALERT IS IMPORTANT}{\LARGE\par}
+		\par\end{center}
+	\begin{center}
+
+		\par\end{center}
 \end{quotation}
 
 \subsection{To illustrate, consider the case of SOC A and SOC B.}
@@ -900,9 +900,9 @@ may vary.
 
 A few potential questions triaging may address are:
 \begin{itemize}
-\item Is malware present on the system? 
-\item How did it get there? 
-\item What was it trying to accomplish? 
+	\item Is malware present on the system?
+	\item How did it get there?
+	\item What was it trying to accomplish?
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
@@ -915,23 +915,23 @@ and evident every time.
 
 \paragraph*{Here are a few tips for the verification:}
 \begin{itemize}
-\item Adjacent Data -- Check the information adjacent to the event. For
-example, if an endpoint has a virus signature hit, look to see if
-there's evidence the virus is running before calling for further
-response metrics. 
-\item Intelligence Review -- Understand the context around the intelligence.
-Just because an IP address was flagged as part of a botnet last week
-does not mean it still is part of a botnet today. 
-\item Initial Priority -- Align with operational incident priorities and
-classify incidents appropriately. Make sure the right level of effort
-is applied to each incident. 
-\item Cross Analysis -- Look for and analyse potentially shared keys, such
-as IP addresses or domain names, across multiple data sources for
-better data acuity. 
+	\item Adjacent Data -- Check the information adjacent to the event. For
+	      example, if an endpoint has a virus signature hit, look to see if
+	      there's evidence the virus is running before calling for further
+	      response metrics.
+	\item Intelligence Review -- Understand the context around the intelligence.
+	      Just because an IP address was flagged as part of a botnet last week
+	      does not mean it still is part of a botnet today.
+	\item Initial Priority -- Align with operational incident priorities and
+	      classify incidents appropriately. Make sure the right level of effort
+	      is applied to each incident.
+	\item Cross Analysis -- Look for and analyse potentially shared keys, such
+	      as IP addresses or domain names, across multiple data sources for
+	      better data acuity.
 \end{itemize}
 
 \paragraph{Once an event is verified, the event becomes an investigation or
-an incident. All incidents must be investigated and tracked.}
+	an incident. All incidents must be investigated and tracked.}
 
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
@@ -943,23 +943,23 @@ organization.
 List of different attach by NIST is:
 
 \subsubsection{External/Removable Media: An attack executed from removable media
-(e.g., flash drive, CD) or a peripheral device.}
+	(e.g., flash drive, CD) or a peripheral device.}
 
 \subsubsection{Email: An attack executed via an email message or attachment (e.g.
-malware infection).}
+	malware infection).}
 
 \subsubsection{Attrition: An attack that employs brute force methods to compromise,
-degrade, or destroy systems, networks, or services. }
+	degrade, or destroy systems, networks, or services. }
 
 \subsubsection{Improper Usage: Any incident resulting from violation of an organization\textquoteright s
-acceptable usage policies by an authorized user, excluding the above
-categories.}
+	acceptable usage policies by an authorized user, excluding the above
+	categories.}
 
 \subsubsection{Web: An attack executed from a website or a web-based application
-(e.g. drive-by download).}
+	(e.g. drive-by download).}
 
 \subsubsection{Loss or Theft of Equipment: The loss or theft of a computing device
-or media used by the organization, such as a laptop or smartphone.}
+	or media used by the organization, such as a laptop or smartphone.}
 
 \subsubsection{Other: An attack that does not fit into any of the other categories.}
 
@@ -969,61 +969,61 @@ or media used by the organization, such as a laptop or smartphone.}
 
 \subsection{Incident Scene Snapshot:}
 \begin{itemize}
-\item Record state of computer
-\item Photos,
-\item State of computer,
-\item What is on the screen?
-\item What is obviously running on the screen?
-\item Xterm?
-\item X-windows?
-\item Should you port scan the affected computer?
+	\item Record state of computer
+	\item Photos,
+	\item State of computer,
+	\item What is on the screen?
+	\item What is obviously running on the screen?
+	\item Xterm?
+	\item X-windows?
+	\item Should you port scan the affected computer?
 \end{itemize}
 \begin{description}
-\item [{Pros:}] You can see all active and listening ports.
-\item [{Cons:}] It affects the computer and some backdoor log how many
-connections come into them and could tip off the bad guy.
+	\item [{Pros:}] You can see all active and listening ports.
+	\item [{Cons:}] It affects the computer and some backdoor log how many
+	      connections come into them and could tip off the bad guy.
 \end{description}
 
 \subsection{Unplug Power from System:}
 
 \paragraph{This method may be the most damaging to effective analysis though
-there are some benefits.}
+	there are some benefits.}
 \begin{description}
-\item [{Pros:}] Benefits include that you can now move the system to a
-more secure location and that you can physically remove the hard drive
-from the system
-\item [{Cons:}] You lose evidence of all running processes and memory.
+	\item [{Pros:}] Benefits include that you can now move the system to a
+	      more secure location and that you can physically remove the hard drive
+	      from the system
+	\item [{Cons:}] You lose evidence of all running processes and memory.
 \end{description}
 
 \subsection{Unplug from The Network:}
 \begin{itemize}
-\item Unplug it from the network and plug the distant end into a small hub
-that is not connected to anything else.
-\item Most systems will write error messages into log files if not on a
-network.
-\item If you make the computer think it is still on a network, you will
-succeed in limiting the amount of changes to that system.
+	\item Unplug it from the network and plug the distant end into a small hub
+	      that is not connected to anything else.
+	\item Most systems will write error messages into log files if not on a
+	      network.
+	\item If you make the computer think it is still on a network, you will
+	      succeed in limiting the amount of changes to that system.
 \end{itemize}
 
 \subsection{Backup or Analyse:}
 
 \paragraph{Set up in policy for your incident response:}
 \begin{itemize}
-\item It depends on the system and what you need it for.
-\item To get BEST evidence BACKUP first at the cost of time to get answers.
-\item To get FAST answers ANALYSE first at the cost of getting best evidence.
-\item Label systems with priority. Some will need answers quicker than your
-ability to get best evidence.
+	\item It depends on the system and what you need it for.
+	\item To get BEST evidence BACKUP first at the cost of time to get answers.
+	\item To get FAST answers ANALYSE first at the cost of getting best evidence.
+	\item Label systems with priority. Some will need answers quicker than your
+	      ability to get best evidence.
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
 \section{Prioritizing Incidents:}
 \begin{itemize}
-\item An Incident's priority is usually determined by assessing its impact
-and urgency. 
-\item Urgency is a measure how quickly a resolution of the Incident is required. 
-\item Impact is measure of the extent of the Incident and of the potential
-damage caused by the Incident before it can be resolved. 
+	\item An Incident's priority is usually determined by assessing its impact
+	      and urgency.
+	\item Urgency is a measure how quickly a resolution of the Incident is required.
+	\item Impact is measure of the extent of the Incident and of the potential
+	      damage caused by the Incident before it can be resolved.
 \end{itemize}
 \rule[0.5ex]{0.75\columnwidth}{1pt}
 
@@ -1031,28 +1031,28 @@ damage caused by the Incident before it can be resolved.
 
 \section{Incident Prioritizing Table:}
 \begin{center}
-\begin{tabular}{|c||l|}
-\hline 
-\textbf{CATEGORY}  & \textbf{DESCRIPTION}\tabularnewline
-\hline 
-\hline 
-\multirow{4}{*}{\textbf{\textcolor{red}{\Large{}HIGH}}} & The damage caused by the incident increases rapidly. \tabularnewline
-\cline{2-2} 
- & Work that cannot be completed by the staff is highly time sensitive.\tabularnewline
-\cline{2-2} 
- & A minor incident can be prevented from becoming a major incident by
-acting immediately.\tabularnewline
-\cline{2-2} 
- & Several users with VIP status are affected.\tabularnewline
-\hline 
-\multirow{2}{*}{\textbf{\textcolor{orange}{\Large{}MEDIUM}}} & The damage caused by the incident increases considerably over time. \tabularnewline
-\cline{2-2} 
- & A single user with VIP status is affected. \tabularnewline
-\hline 
-\multirow{2}{*}{\textbf{\textcolor{teal}{\Large{}LOW}}} & The damage caused by the incident only marginally increases over time. \tabularnewline
-\cline{2-2} 
- & Work that cannot be completed by staff is not time sensitive.\tabularnewline
-\hline 
-\end{tabular}
-\par\end{center}
+	\begin{tabular}{|c||l|}
+		\hline
+		\textbf{CATEGORY}                                            & \textbf{DESCRIPTION}\tabularnewline
+		\hline
+		\hline
+		\multirow{4}{*}{\textbf{\textcolor{red}{\Large{}HIGH}}}      & The damage caused by the incident increases rapidly. \tabularnewline
+		\cline{2-2}
+		                                                             & Work that cannot be completed by the staff is highly time sensitive.\tabularnewline
+		\cline{2-2}
+		                                                             & A minor incident can be prevented from becoming a major incident by
+		acting immediately.\tabularnewline
+		\cline{2-2}
+		                                                             & Several users with VIP status are affected.\tabularnewline
+		\hline
+		\multirow{2}{*}{\textbf{\textcolor{orange}{\Large{}MEDIUM}}} & The damage caused by the incident increases considerably over time. \tabularnewline
+		\cline{2-2}
+		                                                             & A single user with VIP status is affected. \tabularnewline
+		\hline
+		\multirow{2}{*}{\textbf{\textcolor{teal}{\Large{}LOW}}}      & The damage caused by the incident only marginally increases over time. \tabularnewline
+		\cline{2-2}
+		                                                             & Work that cannot be completed by staff is not time sensitive.\tabularnewline
+		\hline
+	\end{tabular}
+	\par\end{center}
 \end{document}

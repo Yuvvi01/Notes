@@ -30,83 +30,83 @@
 \vfill{}
 
 \begin{center}
-\begin{tabular}{|c|l|}
-\hline 
-\textbf{\small{}Type} & \textbf{\small{}Notes}\tabularnewline
-\hline 
-\hline 
-\textbf{\small{}Array} & {\small{}Most efficient use of memory; use in cases where data size
-is fixed.}\tabularnewline
-\hline 
-\textbf{\small{}List} & {\small{}Implementation is optimized for speed. In many cases, List
-will be the best choice.}\tabularnewline
-\hline 
-\textbf{\small{}Collection} & {\small{}List is a better choice, unless publicly exposed as AP.}\tabularnewline
-\hline 
-\textbf{\small{}Linked List} & {\small{}Many operations are fast, but watch out for cache coherency.}\tabularnewline
-\hline 
-\textbf{\small{}Stack} & {\small{}Should not be selected for performance reasons, but algorithmic
-ones.}\tabularnewline
-\hline 
-\textbf{\small{}Queue} & {\small{}Should not be selected for performance reasons, but algorithmic
-ones.}\tabularnewline
-\hline 
-\end{tabular}
-\par\end{center}
+	\begin{tabular}{|c|l|}
+		\hline
+		\textbf{\small{}Type}        & \textbf{\small{}Notes}\tabularnewline
+		\hline
+		\hline
+		\textbf{\small{}Array}       & {\small{}Most efficient use of memory; use in cases where data size
+				is fixed.}\tabularnewline
+		\hline
+		\textbf{\small{}List}        & {\small{}Implementation is optimized for speed. In many cases, List
+				will be the best choice.}\tabularnewline
+		\hline
+		\textbf{\small{}Collection}  & {\small{}List is a better choice, unless publicly exposed as AP.}\tabularnewline
+		\hline
+		\textbf{\small{}Linked List} & {\small{}Many operations are fast, but watch out for cache coherency.}\tabularnewline
+		\hline
+		\textbf{\small{}Stack}       & {\small{}Should not be selected for performance reasons, but algorithmic
+				ones.}\tabularnewline
+		\hline
+		\textbf{\small{}Queue}       & {\small{}Should not be selected for performance reasons, but algorithmic
+				ones.}\tabularnewline
+		\hline
+	\end{tabular}
+	\par\end{center}
 
 \begin{center}
-{\small{}\smallskip{}
-}{\small\par}
-\par\end{center}
+	{\small{}\smallskip{}
+	}{\small\par}
+	\par\end{center}
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline 
-\textbf{\small{}Type} & \textbf{\small{}Add to end} & \textbf{\small{}Insert at middle} & \textbf{\small{}Search for specific element}\tabularnewline
-\hline 
-\hline 
-\textbf{\small{}Array} & {\small{}$\Theta(n)$} & {\small{}$\Theta(n)$} & {\small{}$\Theta(n)$}\tabularnewline
-\hline 
-\textbf{\small{}List} & {\small{}best case $\Theta(1)$; worst case $\Theta(n)$} & {\small{}$\Theta(n)$} & {\small{}$\Theta(n)$}\tabularnewline
-\hline 
-\textbf{\small{}Collection} & {\small{}best case $\Theta(1)$; worst case $\Theta(n)$} & {\small{}$\Theta(n)$} & {\small{}$\Theta(n)$}\tabularnewline
-\hline 
-\textbf{\small{}Linked List} & {\small{}$\Theta(1)$} & {\small{}$\Theta(1)$} & {\small{}$\Theta(n)$}\tabularnewline
-\hline 
-\textbf{\small{}Stack} & {\small{}best case $\Theta(1)$; worst case $\Theta(n)$} & {\small{}N/A} & {\small{}N/A}\tabularnewline
-\hline 
-\textbf{\small{}Queue} & {\small{}best case $\Theta(1)$; worst case $\Theta(n)$} & {\small{}N/A} & {\small{}N/A}\tabularnewline
-\hline 
-\end{tabular}
-\par\end{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{\small{}Type}        & \textbf{\small{}Add to end}                             & \textbf{\small{}Insert at middle} & \textbf{\small{}Search for specific element}\tabularnewline
+		\hline
+		\hline
+		\textbf{\small{}Array}       & {\small{}$\Theta(n)$}                                   & {\small{}$\Theta(n)$}             & {\small{}$\Theta(n)$}\tabularnewline
+		\hline
+		\textbf{\small{}List}        & {\small{}best case $\Theta(1)$; worst case $\Theta(n)$} & {\small{}$\Theta(n)$}             & {\small{}$\Theta(n)$}\tabularnewline
+		\hline
+		\textbf{\small{}Collection}  & {\small{}best case $\Theta(1)$; worst case $\Theta(n)$} & {\small{}$\Theta(n)$}             & {\small{}$\Theta(n)$}\tabularnewline
+		\hline
+		\textbf{\small{}Linked List} & {\small{}$\Theta(1)$}                                   & {\small{}$\Theta(1)$}             & {\small{}$\Theta(n)$}\tabularnewline
+		\hline
+		\textbf{\small{}Stack}       & {\small{}best case $\Theta(1)$; worst case $\Theta(n)$} & {\small{}N/A}                     & {\small{}N/A}\tabularnewline
+		\hline
+		\textbf{\small{}Queue}       & {\small{}best case $\Theta(1)$; worst case $\Theta(n)$} & {\small{}N/A}                     & {\small{}N/A}\tabularnewline
+		\hline
+	\end{tabular}
+	\par\end{center}
 
 \begin{center}
-{\small{}\smallskip{}
-}{\small\par}
-\par\end{center}
+	{\small{}\smallskip{}
+	}{\small\par}
+	\par\end{center}
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline 
-\textbf{\small{}Type} & \textbf{\small{}Random Access} & \textbf{\small{}In-order Access} & \textbf{\small{}Remove from end} & \textbf{\small{}Remove from middle}\tabularnewline
-\hline 
-\hline 
-\textbf{\small{}Array} & {\small{}$\Theta(1)$} & {\small{}$\Theta(1)$} & {\small{}$\Theta(n)$} & {\small{}$\Theta(n)$}\tabularnewline
-\hline 
-\textbf{\small{}List} & {\small{}$\Theta(1)$} & {\small{}$\Theta(1)$} & {\small{}$\Theta(n)$} & {\small{}$\Theta(n)$}\tabularnewline
-\hline 
-\textbf{\small{}Collection} & {\small{}$\Theta(1)$} & {\small{}$\Theta(1)$} & {\small{}$\Theta(n)$} & {\small{}$\Theta(n)$}\tabularnewline
-\hline 
-\textbf{\small{}Linked List} & {\small{}$\Theta(n)$} & {\small{}$\Theta(1)$} & {\small{}$\Theta(1)$} & {\small{}$\Theta(1)$}\tabularnewline
-\hline 
-\textbf{\small{}Stack} & {\small{}$\Theta(n)$} & {\small{}N/A}  & {\small{}$\Theta(1)$} & {\small{}N/A}\tabularnewline
-\hline 
-\textbf{\small{}Queue} & {\small{}$\Theta(n)$} & {\small{}N/A } & {\small{}$\Theta(1)$} & {\small{}N/A}\tabularnewline
-\hline 
-\end{tabular}
-\par\end{center}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{\small{}Type}        & \textbf{\small{}Random Access} & \textbf{\small{}In-order Access} & \textbf{\small{}Remove from end} & \textbf{\small{}Remove from middle}\tabularnewline
+		\hline
+		\hline
+		\textbf{\small{}Array}       & {\small{}$\Theta(1)$}          & {\small{}$\Theta(1)$}            & {\small{}$\Theta(n)$}            & {\small{}$\Theta(n)$}\tabularnewline
+		\hline
+		\textbf{\small{}List}        & {\small{}$\Theta(1)$}          & {\small{}$\Theta(1)$}            & {\small{}$\Theta(n)$}            & {\small{}$\Theta(n)$}\tabularnewline
+		\hline
+		\textbf{\small{}Collection}  & {\small{}$\Theta(1)$}          & {\small{}$\Theta(1)$}            & {\small{}$\Theta(n)$}            & {\small{}$\Theta(n)$}\tabularnewline
+		\hline
+		\textbf{\small{}Linked List} & {\small{}$\Theta(n)$}          & {\small{}$\Theta(1)$}            & {\small{}$\Theta(1)$}            & {\small{}$\Theta(1)$}\tabularnewline
+		\hline
+		\textbf{\small{}Stack}       & {\small{}$\Theta(n)$}          & {\small{}N/A}                    & {\small{}$\Theta(1)$}            & {\small{}N/A}\tabularnewline
+		\hline
+		\textbf{\small{}Queue}       & {\small{}$\Theta(n)$}          & {\small{}N/A }                   & {\small{}$\Theta(1)$}            & {\small{}N/A}\tabularnewline
+		\hline
+	\end{tabular}
+	\par\end{center}
 
 \begin{center}
-\vfill{}
-\par\end{center}
+	\vfill{}
+	\par\end{center}
 \end{document}
