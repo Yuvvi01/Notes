@@ -1,19 +1,34 @@
-\documentclass[10pt,british]{report}
+\documentclass[british]{extreport}
+\usepackage{fourier}
 \usepackage[T1]{fontenc}
-\usepackage[a4paper]{geometry}
+\usepackage{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
 \setcounter{tocdepth}{3}
 \usepackage{babel}
+\usepackage{array}
 \usepackage{enumitem}
+\usepackage[xetex]{graphicx}
 \usepackage{setspace}
 \usepackage[authoryear]{natbib}
 \usepackage{microtype}
 \onehalfspacing
-\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=page,colorlinks=false]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=page,colorlinks=false]
  {hyperref}
+
 \makeatletter
+
+\providecommand{\tabularnewline}{\\}
+
 \newlength{\lyxlabelwidth}
+
+\AtBeginDocument{
+  \def\labelitemi{\(\star\)}
+}
+
 \makeatother
+
 \begin{document}
 \title{\noindent \textbf{LECTURE NOTES\\ON\\COMPUTER ARCHITECTURE\\AND\\ORGANIZATION}}
 \author{\noindent AGNI DATTA}
@@ -21,7 +36,7 @@
 \maketitle
 \noindent \tableofcontents{}
 
-\chapter{INTRODUCTION TO\\SYSTEM ARCHITECTURE\\AND\\ORGANISATION}
+\chapter{INTRODUCTION TO SYSTEM ARCHITECTURE AND ORGANISATION}
 
 \section{System Architecture}
 
@@ -78,10 +93,10 @@ These are a few important points,
 	      design, and performance method.
 	\item Computer Architecture and Organisation proves that different computer
 	      organizations can use the same architecture. For example, Intel and
-	      AMD make x86\_64 CPU (processor is of 64 bits), but INTEL\footnote{https://www.intel.com/}
-	      makes its organization on x86\_64, and AMD\footnote{https://www.amd.com/}
-	      makes its own, which means the processor is 64 bits. Still, internal
-	      circuits, working, interconnections will be different.
+	      AMD make x86\_64 CPU (processor is of 64 bits), but INTEL makes its
+	      organization on x86\_64, and AMD makes its own, which means the processor
+	      is 64 bits. Still, internal circuits, working, interconnections will
+	      be different.
 	\item Computer Architecture and Organisation subject helps the computer
 	      engineers to understand the components functioning, working, characteristics,
 	      performance, and their interactions.
@@ -98,10 +113,6 @@ necessary hardware, operating system (main software), and peripheral
 devices for \textquotedbl full\textquotedbl{} functioning. This word
 can also apply to a collection of computers that are linked and work
 together, such as a computer network or a computer cluster.
-
-\vfill{}
-
-\pagebreak{}
 
 \noindent The four basic types of computers are as under:
 
@@ -166,4 +177,62 @@ microprocessors, the term \textquotedbl microcomputer\textquotedbl{}
 was coined. The Altair 8800, released in 1975, was one of the most
 well-known early system. The word \textquotedbl microcomputer\textquotedbl{}
 has almost become obsolete.
+
+\medskip{}
+
+\begin{center}
+	\begin{tabular}{|>{\raggedright}m{40mm}|>{\raggedright}m{40mm}|>{\raggedright}m{40mm}|>{\raggedright}m{40mm}|}
+		\hline
+		\textbf{MICRO COMPUTER}                                & \textbf{MINI COMPUTER}                                                    & \textbf{MAINFRAME COMPUTER}                                            & \textbf{SUPER COMPUTER}\tabularnewline
+		\hline
+		\hline
+		A microcomputer is a small relatively inexpensive computer with a
+		microprocessor as its central processing unit (CPU).   & It was first developed by IBM in mid 1960. Also called midrange computer. & It is type of computers that generally are known for their large size,
+		amount of storage, processing power and high reliability. It first
+		appeared in 1940.                                      & It consists of tens of thousands of processor that are able to perform
+		billions and trillions of calculations or computations per seconds.\tabularnewline
+		\hline
+		It includes a microprocessor, memory, and I/O devices. & It may content one or more processors, support multiprocessing and
+		tasking and generally resilient to high workloads.     & Used by large organizations for mission-critical applications required
+		for high volume data processing. Ability to run multiple operating
+		system.                                                & Designed for enterprises and organization which need massive computing
+		power.\tabularnewline
+		\hline
+		Example: IBM PC, Apple Macintoshes, Dell Home PC       & Example: DEC\textquoteright s,VAX, RANGE                                  & Example: IBM zSeries, System z9                                        & Example: IBM Sequoia, PARAM, Fujitsu Fugaku\tabularnewline
+		\hline
+	\end{tabular}
+	\par\end{center}
+
+\chapter{Basic Structure of Computer}
+
+\section{Basic Functional Units}
+\begin{center}
+	\includegraphics[scale=0.3]{Picture/FUNCTIONAL_UNIT}
+	\par\end{center}
+
+\section{Information Handled by Computer}
+
+\subsection{Instructions/Machine Instructions}
+\begin{center}
+	\includegraphics[scale=0.25]{Picture/COMPILER_DIAGRAM}
+	\par\end{center}
+\begin{itemize}
+	\item Govern the transfer of information within a computer as well as between
+	      the computer and its I/O devices
+	\item Specify the arithmetic and logic operations to be performed
+	\item Program is a list of instruction that perform a task
+	\item Data used as operands by the instructions source program
+	\item Encoded in binary code: 0 and 1
+\end{itemize}
+
+\subsection{Data}
+\begin{itemize}
+	\item Data is to be processed
+	\item Compilation of high level language source program in to list of machine
+	      instruction ( object program)
+	\item Information challenged by computer must encoded in suitable form
+	\item Each number, character or instruction is encoded as a string of binary
+	      digits called bits i.e. ( 0 or 1)
+\end{itemize}
+
 \end{document}
