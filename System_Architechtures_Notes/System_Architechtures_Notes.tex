@@ -1,6 +1,7 @@
 \documentclass[british]{extreport}
 \usepackage{fourier}
 \usepackage[T1]{fontenc}
+\usepackage[latin9]{luainputenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
 \setcounter{tocdepth}{3}
@@ -12,9 +13,7 @@
 \usepackage[authoryear]{natbib}
 \usepackage{microtype}
 \onehalfspacing
-\usepackage[unicode=true,pdfusetitle,
- bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
- breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=page,colorlinks=false]
+\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false, breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=page,colorlinks=false]
  {hyperref}
 
 \makeatletter
@@ -22,7 +21,6 @@
 \providecommand{\tabularnewline}{\\}
 
 \newlength{\lyxlabelwidth}
-
 \AtBeginDocument{
   \def\labelitemi{\(\star\)}
 }
@@ -37,6 +35,8 @@
 \noindent \tableofcontents{}
 
 \chapter{INTRODUCTION TO SYSTEM ARCHITECTURE AND ORGANISATION}
+
+\pagebreak{}
 
 \section{System Architecture}
 
@@ -205,6 +205,8 @@ has almost become obsolete.
 
 \chapter{Basic Structure of Computer}
 
+\pagebreak{}
+
 \section{Basic Functional Units}
 \begin{center}
 	\includegraphics[scale=0.3]{Picture/FUNCTIONAL_UNIT}
@@ -232,7 +234,7 @@ has almost become obsolete.
 	      instruction ( object program)
 	\item Information challenged by computer must encoded in suitable form
 	\item Each number, character or instruction is encoded as a string of binary
-	      digits called bits i.e. ( 0 or 1)
+	      digits called bits i.e. (0 or 1)
 \end{itemize}
 
 \end{document}
