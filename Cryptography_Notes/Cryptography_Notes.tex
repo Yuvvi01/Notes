@@ -1,6 +1,7 @@
+
 \documentclass[british]{article}
+\usepackage{fourier}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{luainputenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
 \usepackage{fancyhdr}
@@ -15,14 +16,24 @@
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{microtype}
-\providecommand{\tabularnewline}{\\}
-\usepackage{paralist}
 \onehalfspacing
-\usepackage[unicode=true,pdfusetitle, bookmarks=true,bookmarksnumbered=true,bookmarksopen=false, breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
  {hyperref}
-\hypersetup{pdfborderstyle=}
+\hypersetup{
+ pdfborderstyle=}
+
 \makeatletter
+
+
+\providecommand{\tabularnewline}{\\}
+
+
+\usepackage{paralist}
+
 \@ifundefined{date}{}{\date{}}
+
 \usepackage{fancyhdr}
 \usepackage{babel}
 \usepackage{array}
@@ -1046,8 +1057,8 @@ key search with available limited computing resources.
 
 Rotation 13 (ROT13)\footnote{ROT13 is a famous shift cipher and widely used for beginner level
 	cryptographic problems and in CTF problems.} is a simple letter substitution cipher that replaces a letter with
-the $13^{th}$ letter after it in the alphabet. ROT13 is a special
-case of the Caesar cipher. Because there are 26 letters $(2\times13)$
+the $13^{\text{th}}$ letter after it in the alphabet. ROT13 is a
+special case of the Caesar cipher. Because there are 26 letters $(2\times13)$
 in the basic Latin alphabet, ROT13 is its own inverse; that is, to
 undo ROT13, the same algorithm is applied, so the same action can
 be used for encoding and decoding.
@@ -1208,9 +1219,10 @@ easily broken.
 
 Monoalphabetic cipher is a substitution cipher in which for a given
 key, the cipher alphabet for each plain alphabet is fixed throughout
-the encryption process. For example, if ‘A’ is encrypted as ‘D’, for
-any number of occurrence in that plaintext, ‘A’ will always get encrypted
-to ‘D’.
+the encryption process. For example, if \textquoteleft A\textquoteright{}
+is encrypted as \textquoteleft D\textquoteright , for any number of
+occurrence in that plaintext, \textquoteleft A\textquoteright{} will
+always get encrypted to \textquoteleft D\textquoteright .
 
 All of the substitution ciphers we have discussed earlier in this
 chapter are monoalphabetic; these ciphers are highly susceptible to
