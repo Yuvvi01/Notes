@@ -9,5 +9,6 @@
 *.ini
 *.bak0
 *.log
+# Compiled PDF
 System_Architechtures_Notes/Picture/COMPILER_DIAGRAM.pdf
 System_Architechtures_Notes/Picture/FUNCTIONAL_UNIT.pdf
