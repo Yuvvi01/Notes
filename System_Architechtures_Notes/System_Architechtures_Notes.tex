@@ -1,7 +1,6 @@
 \documentclass[british]{extreport}
 \usepackage{fourier}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{luainputenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
 \setcounter{tocdepth}{3}
@@ -13,7 +12,7 @@
 \usepackage[authoryear]{natbib}
 \usepackage{microtype}
 \onehalfspacing
-\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false, breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=page,colorlinks=false]
+\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=page,colorlinks=false]
  {hyperref}
 
 \makeatletter
@@ -21,6 +20,7 @@
 \providecommand{\tabularnewline}{\\}
 
 \newlength{\lyxlabelwidth}
+
 \AtBeginDocument{
   \def\labelitemi{\(\star\)}
 }
@@ -178,8 +178,7 @@ was coined. The Altair 8800, released in 1975, was one of the most
 well-known early system. The word \textquotedbl microcomputer\textquotedbl{}
 has almost become obsolete.
 
-\medskip{}
-
+\subsection{Comparison of Processors}
 \begin{center}
 	\begin{tabular}{|>{\raggedright}m{40mm}|>{\raggedright}m{40mm}|>{\raggedright}m{40mm}|>{\raggedright}m{40mm}|}
 		\hline
@@ -226,6 +225,8 @@ has almost become obsolete.
 	\item Data used as operands by the instructions source program
 	\item Encoded in binary code: 0 and 1
 \end{itemize}
+\vfill{}
+
 
 \subsection{Data}
 \begin{itemize}
