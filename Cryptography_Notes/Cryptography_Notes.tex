@@ -1,13 +1,10 @@
-
-\documentclass[british]{article}
+\documentclass[british]{report}
 \usepackage{fourier}
 \usepackage[T1]{fontenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
+\pagestyle{plain}
 \setcounter{secnumdepth}{4}
-\setcounter{tocdepth}{2}
 \usepackage{babel}
 \usepackage{array}
 \usepackage{textcomp}
@@ -15,41 +12,24 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{setspace}
+\usepackage{nomencl}
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\makenomenclature
 \usepackage{microtype}
 \onehalfspacing
-\usepackage[unicode=true,pdfusetitle,
- bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
- breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
+\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=section,colorlinks=false]
  {hyperref}
-\hypersetup{
- pdfborderstyle=}
+\hypersetup{pdfborderstyle=}
 
 \makeatletter
 
-
 \providecommand{\tabularnewline}{\\}
-
-
-\usepackage{paralist}
 
 \@ifundefined{date}{}{\date{}}
-
-\usepackage{fancyhdr}
-\usepackage{babel}
-\usepackage{array}
-% theme of the document
-%\usepackage{draculatheme}
-%\color{draculagreen}
-% remove the comment symbols in the above lines
-\providecommand{\tabularnewline}{\\}
-\@addtoreset{section}{part}
-\usepackage[nobottomtitles*]{titlesec}
-\fancyhead[RO]{\textsl{TABLE OF CONTENTS}}
-\fancyhead{}
-\fancyhead[RE,LO]{\leftmark}
-\AtBeginDocument{
-  \def\labelitemi{\large\(\star\)}
-}
+\def\nompreamble{\addcontentsline{toc}{section}{\nomname}\markboth{\nomname}{\nomname}}
+\pagenumbering{roman}
+\addcontentsline{toc}{section}{Abstract}
 
 \AtBeginDocument{
   \def\labelitemi{\(\star\)}
@@ -57,25 +37,18 @@
 
 \makeatother
 
+\def\eqdeclaration#1{, see equation\nobreakspace(#1)}
+\def\pagedeclaration#1{, page\nobreakspace#1}
+\def\nomname{Nomenclature}
+
 \begin{document}
-\title{\textbf{\Huge{}CRYPTOGRAPHY}}
+\title{\textbf{\huge CRYPTOGRAPHY}
+\\
+{\normalsize \textquoteright We can only see a short distance ahead, but we can see plenty there that needs to be done \textquoteleft}
+\\
+{\normalsize Alan Turing} }
 \author{AGNI DATTA\thanks{I am a research oriented cyber-security student. Reach me at https://github.com/datta-agni}}
 \maketitle
-\begin{center}
-	\rule[0.5ex]{0.5\columnwidth}{0.75pt}
-	\par\end{center}
-\begin{quotation}
-	\begin{center}
-		\textbf{`We can only see a short distance ahead, but we can see plenty
-			there that needs to be done'}
-		\par\end{center}
-	\begin{center}
-		Alan Turing
-		\par\end{center}
-
-\end{quotation}
-\medskip{}
-
 \begin{abstract}
 	{\normalsize{}Cryptography --- the science of secret writing ---
 		is an ancient art; the first documented use of cryptography in writing
@@ -87,135 +60,55 @@
 		widespread development of computer communications. In data and telecommunications,
 		cryptography is necessary when communicating over any untrusted medium,
 		which includes just about any network, particularly the Internet.}{\normalsize\par}
-
-	\vfill{}
 \end{abstract}
-\pagebreak{}
-
 \tableofcontents{}
 
-\vfill{}
+\settowidth{\nomlabelwidth}{Decryption Algorithm}
+\printnomenclature{}
+
+\nomenclature{Cryptography}{The transformed message cipher an algorithm for transforming an intelligible message into one that is unintelligible by transposition and/or substitution methods the art or science encompassing the principles and methods of transforming an intelligible message into one that is unintelligible, and then re-transforming that message back to its original form.}
+
+\nomenclature{Cryptanalysis}{The study of principles and methods of transforming an unintelligible message back into an intelligible message without knowledge of the key. Also called codebreaking.}
+
+\nomenclature{Cryptology}{The sum of both cryptography and cryptanalysis.}
+
+\nomenclature{Cryptosystem}{A system which converts plain text to cipher text or cipher text to plain text by the application of encryption or decryption algorithm. The key generation for encryption and decryption algorithms is also a part of the cryptosystem.}
+
+\nomenclature{Key}{Some critical information used by the cipher, known only to the sender and receiver.}
+
+\nomenclature{Code}{An algorithm for transforming an intelligible message into an unintelligible one using a code-book.}
+
+\nomenclature{Decipher (Decode)}{The process of converting ciphertext back into plaintext using a cipher and a key.}
+
+\nomenclature{Encipher (Encode)}{The process of converting plaintext to ciphertext using a cipher and a key.}
+
+\nomenclature{Encryption Algorithm}{It is a mathematical process that produces a ciphertext for any given plaintext and encryption key. It is a cryptographic algorithm that takes plaintext and an encryption key as input and produces a ciphertext.}
+
+\nomenclature{Decryption Algorithm}{It is a mathematical process, that produces a unique plaintext for any given ciphertext and decryption key. It is a cryptographic algorithm that takes a ciphertext and a decryption key as input, and outputs a plaintext. The decryption algorithm essentially reverses the encryption algorithm and is thus closely related to it.}
+
+\nomenclature{Encryption Key}{It is a value that is known to the sender. The sender inputs the encryption key into the encryption algorithm along with the plaintext in order to compute the ciphertext.}
+
+\nomenclature{Decryption Key}{It is a value that is known to the receiver. The decryption key is related to the encryption key, but is not always identical to it. The receiver inputs the decryption key into the decryption algorithm along with the ciphertext in order to compute the plaintext.}
+
+\nomenclature{Interceptor}{An interceptor (an attacker) is an unauthorized entity who attempts to determine the plaintext. He can see the ciphertext and may know the decryption algorithm. He, however, must never know the decryption key.}
+
+\nomenclature{Plaintext}{The original intelligible message. It is the data to be protected during transmission.}
+
+\nomenclature{Ciphertext}{The transformed message cipher an algorithm for transforming an intelligible message into one that is unintelligible by transposition and/or substitution methods. It is the scrambled version of the plaintext produced by the encryption algorithm using a specific the encryption key. The ciphertext is not guarded. It flows on public channel. It can be intercepted or compromised by anyone who has access to the communication channel.}
+
+\nomenclature{Notation}{P : Plaintext, C : Ciphertext, E : Encryption Algorithm, D : Decryption Algorithm, k : Key}
 
 \pagebreak{}
 
-\section{Glossary}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Introduction To Cryptography and Related Topics}
 \begin{center}
 	\rule[0.5ex]{450bp}{0.75pt}
 	\par\end{center}
 
-\subsection{Cryptography}
-
-The transformed message cipher an algorithm for transforming an intelligible
-message into one that is unintelligible by transposition and/or substitution
-methods the art or science encompassing the principles and methods
-of transforming an intelligible message into one that is unintelligible,
-and then re-transforming that message back to its original form.
-
-\subsection{Cryptanalysis}
-
-The study of principles and methods of transforming an unintelligible
-message back into an intelligible message without knowledge of the
-key. Also called codebreaking.
-
-\subsection{Cryptology}
-
-The sum of both cryptography and cryptanalysis.
-
-\subsection{Cryptosystem}
-
-A system which converts plain text to cipher text or cipher text to
-plain text by the application of encryption or decryption algorithm.
-The key generation for encryption and decryption algorithms is also
-a part of the cryptosystem.
-
-\subsection{Key}
-
-Some critical information used by the cipher, known only to the sender
-and receiver.
-
-\subsection{Code}
-
-An algorithm for transforming an intelligible message into an unintelligible
-one using a code-book.
-
-\subsection{Decipher (Decode)}
-
-The process of converting ciphertext back into plaintext using a cipher
-and a key.
-
-\subsection{Encipher (Encode)}
-
-The process of converting plaintext to ciphertext using a cipher and
-a key.
-
-\subsection{Encryption Algorithm}
-
-It is a mathematical process that produces a ciphertext for any given
-plaintext and encryption key. It is a cryptographic algorithm that
-takes plaintext and an encryption key as input and produces a ciphertext.
-
-\subsection{Decryption Algorithm}
-
-It is a mathematical process, that produces a unique plaintext for
-any given ciphertext and decryption key. It is a cryptographic algorithm
-that takes a ciphertext and a decryption key as input, and outputs
-a plaintext. The decryption algorithm essentially reverses the encryption
-algorithm and is thus closely related to it.
-
-\subsection{Encryption Key}
-
-It is a value that is known to the sender. The sender inputs the encryption
-key into the encryption algorithm along with the plaintext in order
-to compute the ciphertext.
-
-\subsection{Decryption Key}
-
-It is a value that is known to the receiver. The decryption key is
-related to the encryption key, but is not always identical to it.
-The receiver inputs the decryption key into the decryption algorithm
-along with the ciphertext in order to compute the plaintext.
-
-\subsection{Interceptor}
-
-An interceptor (an attacker) is an unauthorized entity who attempts
-to determine the plaintext. He can see the ciphertext and may know
-the decryption algorithm. He, however, must never know the decryption
-key.
-
-\subsection{Plaintext}
-
-The original intelligible message. It is the data to be protected
-during transmission.
-
-\subsection{Ciphertext}
-
-The transformed message cipher an algorithm for transforming an intelligible
-message into one that is unintelligible by transposition and/or substitution
-methods. It is the scrambled version of the plaintext produced by
-the encryption algorithm using a specific the encryption key. The
-ciphertext is not guarded. It flows on public channel. It can be intercepted
-or compromised by anyone who has access to the communication channel.
-
-\subsection{Notation}
-
-\begin{tabular}{>{\raggedright}p{1.5cm}l}
-	$P$ & plaintext\tabularnewline
-	$C$ & ciphertext\tabularnewline
-	$E$ & the encryption method\tabularnewline
-	$D$ & the decryption method\tabularnewline
-	$k$ & the key\tabularnewline
-\end{tabular}
-
-\vfill{}
-
-\pagebreak{}
-
-\section{Introduction To Cryptography and Related Topics}
-\begin{center}
-	\rule[0.5ex]{450bp}{0.75pt}
-	\par\end{center}
-
-\subsection{Cryptography}
+\section{Cryptography}
 
 Cryptography, or cryptology, is the practice and study of techniques
 for secure communication in the presence of third parties called adversaries.
@@ -250,7 +143,7 @@ functions of cryptography:
 \medskip{}
 
 
-\subsubsection{Security Services of Cryptography}
+\subsection{Security Services of Cryptography}
 
 The primary objective of using cryptography is to provide the following
 four fundamental information security services. Let us now see the
@@ -350,7 +243,7 @@ encryption schemes. Cryptology is the umbrella term referring to the
 broad study of secret writing, and encompasses both cryptography and
 cryptanalysis.
 
-\subsubsection{Ancient Cryptography}
+\subsection{Ancient Cryptography}
 
 The art of cryptography is considered to be born along with the art
 of writing. As civilizations evolved, human beings got organized in
@@ -378,7 +271,7 @@ number (three was a common choice), the recipient of this message
 would then shift the letters back by the same number and obtain the
 original message.
 
-\subsubsection{Evolution of Cryptography}
+\subsection{Evolution of Cryptography}
 
 It is during and after the European Renaissance, various Italian and
 Papal states led the rapid proliferation of cryptographic techniques.
@@ -404,14 +297,14 @@ of cryptography. They used cryptography to guard their secrets from
 others. Now, the arrival of computers and the Internet has brought
 effective cryptography within the reach of common people.
 
-\subsubsection{Modern Cryptography}
+\subsection{Modern Cryptography}
 
 Modern cryptography is the cornerstone of computer and communications
 security. Its foundation is based on various concepts of mathematics
 such as number theory, computational-complexity theory, and probability
 theory.
 
-\subsubsection{Characteristics of Modern and Ancient Cryptography}
+\subsection{Characteristics of Modern and Ancient Cryptography}
 \begin{center}
 	\begin{tabular}{|m{0.38\paperwidth}|>{\raggedright}m{0.4\paperwidth}|}
 		\hline
@@ -435,7 +328,7 @@ theory.
 	\end{tabular}
 	\par\end{center}
 
-\subsubsection{Cryptography Primitives}
+\subsection{Cryptography Primitives}
 
 Cryptography primitives\footnote{Cryptographic Primitives are intricately related and they are often
 	combined to achieve a set of desired security services from a cryptosystem.} are nothing but the tools and techniques in Cryptography that can
@@ -472,7 +365,7 @@ security service on their own.
 \medskip{}
 
 
-\subsection{Cryptanalysis}
+\section{Cryptanalysis}
 
 Cryptanalysis is the study of analysing information systems in order
 to study the hidden aspects of the systems. Cryptanalysis is used
@@ -486,14 +379,14 @@ in their implementation.
 \vfill{}
 
 
-\subsection{Cryptosystem}
+\section{Cryptosystem}
 
 A cryptosystem\footnote{For a given cryptosystem, a collection of all possible decryption
 	keys is called a key space.} is an implementation of cryptographic techniques and their accompanying
 infrastructure to provide information security services. A cryptosystem
 is also referred to as a cipher system.
 
-\subsection{Steganography}
+\section{Steganography}
 
 Steganography is the practice of concealing a message within another
 message or a physical object. In computing/electronic contexts, a
@@ -529,12 +422,12 @@ for it is unlikely to notice the change.
 
 \pagebreak{}
 
-\section{Types of Cryptography}
+\chapter{Types of Cryptography}
 \begin{center}
 	\rule[0.5ex]{450bp}{0.75pt}
 	\par\end{center}
 
-\subsection{Private-Key Cryptography}
+\section{Private-Key Cryptography}
 
 Symmetric-key algorithms are algorithms for cryptography that use
 the same cryptographic keys for both the encryption of plaintext and
@@ -553,7 +446,7 @@ encryption (also known as asymmetric-key encryption).
 \medskip{}
 
 
-\subsubsection{Challenge of Private-Key Cryptosystem}
+\subsection{Challenge of Private-Key Cryptosystem}
 
 There are two restrictive challenges of employing symmetric key cryptography.
 \begin{itemize}
@@ -572,7 +465,7 @@ parties. For example, a communication between online seller and customer.
 These limitations of symmetric key encryption gave rise to asymmetric
 key encryption schemes.
 
-\subsection{Public-Key Cryptography}
+\section{Public-Key Cryptography}
 
 Public-key cryptography, or asymmetric cryptography, is a cryptographic
 system that uses pairs of keys: public keys (which may be known to
@@ -626,7 +519,7 @@ encryption.
 \medskip{}
 
 
-\subsubsection{Challenge of Public-Key Cryptosystem}
+\subsection{Challenge of Public-Key Cryptosystem}
 
 Public-key cryptosystems have one significant challenge \textminus{}
 the user needs to trust that the public key that he is using in communications
@@ -646,7 +539,7 @@ The most common method of making the verified public keys available
 is to embed them in a certificate which is digitally signed by the
 trusted third party.
 
-\subsubsection{Kerckhoff\textquoteright s Principle}
+\subsection{Kerckhoff\textquoteright s Principle}
 
 Kerckhoff's Principle for Cryptosystem In the $19^{\text{th}}$ century,
 a Dutch cryptographer Auguste Kerckhoff furnished the requirements
@@ -681,7 +574,7 @@ who are connected to the Internet. In such cases, using a secret algorithm
 is not feasible, hence Kerckhoff principles became essential guidelines
 for designing algorithms in modern cryptography.
 
-\subsection{Hash Function}
+\section{Hash Function}
 
 A hash function is any function that can be used to map data of arbitrary
 size to fixed-size values. The values returned by a hash function
@@ -716,7 +609,7 @@ the concepts numbered mainly in terms of data integrity.
 \]
 
 
-\subsection{Relation between Encryption Schemes}
+\section{Relation between Encryption Schemes}
 \begin{center}
 	\begin{tabular}{|l||l|l|}
 		\hline
@@ -732,12 +625,12 @@ the concepts numbered mainly in terms of data integrity.
 	\end{tabular}
 	\par\end{center}
 
-\subsection{Attacks on Cryptosystems}
+\section{Attacks on Cryptosystems}
 
 Attacks are typically categorized based on the action performed by
 the attacker. An attack, thus, can be passive or active.
 
-\subsubsection{Passive Attacks}
+\subsection{Passive Attacks}
 
 The main goal of a passive attack is to obtain unauthorized access
 to the information. For example, actions such as intercepting and
@@ -750,7 +643,7 @@ leaves the owner in possession of that data. Passive information attack
 is thus more dangerous than stealing of goods, as information theft
 may go unnoticed by the owner.
 
-\subsubsection{Active Attacks}
+\subsection{Active Attacks}
 
 An active attack involves changing the information in some way by
 conducting some process on the information.
@@ -765,12 +658,12 @@ For example,
 	\item Denial of access to information for legitimate users (denial of service).
 \end{itemize}
 
-\subsection{Assumptions of Attacker}
+\section{Assumptions of Attacker}
 
 Let us see the prevailing environment around cryptosystems followed
 by the types of attacks employed to break these systems :
 
-\subsubsection{Environment around Cryptosystem}
+\subsection{Environment around Cryptosystem}
 
 While considering possible attacks on the cryptosystem, it is necessary
 to know the cryptosystems environment. The attacker's assumptions
@@ -826,7 +719,7 @@ security environment and attacker's capabilities.
 
 \pagebreak{}
 
-\subsection{Cryptographic Attacks}
+\section{Cryptographic Attacks}
 
 The basic intention of an attacker is to break a cryptosystem and
 to find the plaintext from the ciphertext. To obtain the plaintext,
@@ -839,7 +732,7 @@ is considered as broken or compromised.
 Based on the methodology used, attacks on cryptosystems are categorized
 as follows \textminus{}
 
-\subsubsection{Ciphertext Only Attacks (COA) }
+\subsection{Ciphertext Only Attacks (COA) }
 
 In this method, the attacker has access to a set of ciphertext(s).
 He does not have access to corresponding plaintext. COA is said to
@@ -848,7 +741,7 @@ a given set of ciphertext. Occasionally, the encryption key can be
 determined from this attack. Modern cryptosystems are guarded against
 ciphertext-only attacks.
 
-\subsubsection{Known Plaintext Attack (KPA)}
+\subsection{Known Plaintext Attack (KPA)}
 
 In this method, the attacker knows the plaintext for some parts of
 the ciphertext. The task is to decrypt the rest of the ciphertext
@@ -856,7 +749,7 @@ using this information. This may be done by determining the key or
 via some other method. The best example of this attack is linear cryptanalysis
 against block ciphers.
 
-\subsubsection{Chosen Plaintext Attack (CPA)}
+\subsection{Chosen Plaintext Attack (CPA)}
 
 In this method, the attacker has the text of his choice encrypted.
 So he has the ciphertext-plaintext pair of his choice. This simplifies
@@ -865,7 +758,7 @@ is differential cryptanalysis applied against block ciphers as well
 as hash functions. A popular public key cryptosystem, RSA is also
 vulnerable to chosen-plaintext attacks.
 
-\subsubsection{Dictionary Attack}
+\subsection{Dictionary Attack}
 
 This attack has many variants, all of which involve compiling a `dictionary'.
 In simplest method of this attack, attacker builds a dictionary of
@@ -873,7 +766,7 @@ ciphertexts and corresponding plaintexts that he has learnt over a
 period of time. In future, when an attacker gets the ciphertext, he
 refers the dictionary to find the corresponding plaintext.
 
-\subsubsection{Brute Force Attack (BFA)}
+\subsection{Brute Force Attack (BFA)}
 
 In this method, the attacker tries to determine the key by attempting
 all possible keys. If the key is 8 bits long, then the number of possible
@@ -881,7 +774,7 @@ keys is $2^{8}=256$. The attacker knows the ciphertext and the algorithm,
 now he attempts all the 256 keys one by one for decryption. The time
 to complete the attack would be very high if the key is long.
 
-\subsubsection{Birthday Attack}
+\subsection{Birthday Attack}
 
 This attack is a variant of brute-force technique. It is used against
 the cryptographic hash function. When students in a class are asked
@@ -896,7 +789,7 @@ be obtained after about $5.1\times109$ random inputs. If the attacker
 is able to find two different inputs that give the same hash value,
 it is a collision and that hash function is said to be broken.
 
-\subsubsection{Man in Middle Attack (MIM)}
+\subsection{Man in Middle Attack (MIM)}
 
 The targets of this attack are mostly public key cryptosystems where
 key exchange is involved before communication takes place.
@@ -912,13 +805,13 @@ key exchange is involved before communication takes place.
 	      that $\mathbb{B}$ takes it as if it is taking it from $\mathbb{A}$.
 \end{itemize}
 
-\subsubsection{Side Channel Attack (SCA)}
+\subsection{Side Channel Attack (SCA)}
 
 This type of attack is not against any particular type of cryptosystem
 or algorithm. Instead, it is launched to exploit the weakness in physical
 implementation of the cryptosystem.
 
-\subsubsection{Timing Attacks}
+\subsection{Timing Attacks}
 
 They exploit the fact that different computations take different times
 to compute on processor. By measuring such timings, it is be possible
@@ -926,18 +819,18 @@ to know about a particular computation the processor is carrying out.
 For example, if the encryption takes a longer time, it indicates that
 the secret key is long.
 
-\subsubsection{Power Analysis Attacks}
+\subsection{Power Analysis Attacks}
 
 These attacks are similar to timing attacks except that the amount
 of power consumption is used to obtain information about the nature
 of the underlying computations.
 
-\subsubsection{Fault analysis Attacks}
+\subsection{Fault analysis Attacks}
 
 In these attacks, errors are induced in the cryptosystem and the attacker
 studies the resulting output for useful information.
 
-\subsection{Practicality of Attacks}
+\section{Practicality of Attacks}
 
 The attacks on cryptosystems described here are highly academic, as
 majority of them come from the academic community. In fact, many academic
@@ -953,12 +846,12 @@ improvement.
 
 \pagebreak{}
 
-\section{Symmetric Cryptosystems}
+\chapter{Symmetric Cryptosystems}
 \begin{center}
 	\rule[0.5ex]{450bp}{0.75pt}
 	\par\end{center}
 
-\subsubsection{Ancient Cryptosystems}
+\subsection{Ancient Cryptosystems}
 
 Before proceeding further, we shall discuss some facts about historical
 cryptosystems:
@@ -973,9 +866,9 @@ cryptosystems:
 	      for performing both an encryption, and the corresponding decryption.
 \end{itemize}
 
-\subsection{Shift Ciphers}
+\section{Shift Ciphers}
 
-\subsubsection{Caesar/Roman Emperors Cipher}
+\subsection{Caesar/Roman Emperors Cipher}
 
 It is a mono-alphabetic cipher wherein each letter of the plaintext
 is substituted by another letter to form the ciphertext. It is a simplest
@@ -992,7 +885,7 @@ shift number' for shifting the alphabet. This number which is between
 The name \textbf{`Caesar Cipher'} is occasionally used to describe
 the Shift Cipher when the \textbf{`shift of three'} is used.
 
-\paragraph{Process of Shift Cipher}
+\subsubsection{Process of Shift Cipher}
 \begin{itemize}
 	\item In order to encrypt a plaintext letter, the sender positions the sliding
 	      ruler underneath the first set of plaintext letters and slides it
@@ -1041,19 +934,19 @@ the Shift Cipher when the \textbf{`shift of three'} is used.
 
 	\par\end{center}
 
-\paragraph{Algorithm}
+\subsubsection{Algorithm}
 \begin{description}
 	\item [{Encryption:}] $C\equiv E(k,P)\equiv(P+k)\bmod26$
 	\item [{Decryption:}] $P\equiv D(k,C)\equiv(C-k)\bmod26$
 \end{description}
 
-\paragraph{Security Value :}
+\subsubsection{Security Value :}
 
 Caesar Cipher is not a secure cryptosystem because there are only
 26 possible keys to try out. An attacker can carry out an exhaustive
 key search with available limited computing resources.
 
-\subsubsection{ROT13}
+\subsection{ROT13}
 
 Rotation 13 (ROT13)\footnote{ROT13 is a famous shift cipher and widely used for beginner level
 	cryptographic problems and in CTF problems.} is a simple letter substitution cipher that replaces a letter with
@@ -1063,13 +956,13 @@ in the basic Latin alphabet, ROT13 is its own inverse; that is, to
 undo ROT13, the same algorithm is applied, so the same action can
 be used for encoding and decoding.
 
-\paragraph{Algorithm}
+\subsubsection{Algorithm}
 \begin{description}
 	\item [{Encryption:}] $C\equiv E(P,k=13)\equiv(P+13)\bmod26$
 	\item [{Decryption:}] $P\equiv D(C,k=13)\equiv(C-13)\bmod26$
 \end{description}
 
-\paragraph{Security Value : }
+\subsection{Security Value : }
 
 ROT13 cipher algorithm is considered as special case of Caesar Cipher.
 It is not a very secure algorithm and can be broken easily with frequency
@@ -1078,7 +971,7 @@ by shifting 13 places. Therefore, it does not include any practical
 use. The algorithm provides virtually no cryptographic security, and
 is often cited as a canonical example of weak encryption.
 
-\subsubsection{ROT47}
+\subsection{ROT47}
 
 Rotation 47 (ROT47)\footnote{ROT47 though more secure than ROT13 is not secure enough. It is also
 	widely used in basic and beginner level cryptographic problems.} is a derivative of ROT13 which, in addition to scrambling the basic
@@ -1104,9 +997,9 @@ key search.
 \vfill{}
 
 
-\subsection{Cryptanalysis of Mono-Alphabetic Substitution Cipher}
+\section{Cryptanalysis of Mono-Alphabetic Substitution Cipher}
 
-\subsubsection{Frequency Analysis}
+\subsection{Frequency Analysis}
 
 In cryptography, frequency analysis is the study of the frequency
 of letters or groups of letters in a ciphertext. The method is used
@@ -1144,7 +1037,7 @@ have been encoded as (e.g. E, T, A, O, etc.) This will help us decrypt
 some of the letters in the text. We can then recognise patterns/words
 in the partly decoded text to identify more substitutions.
 
-\subsubsection{Brute Force/Exhaustive Key Search}
+\subsection{Brute Force/Exhaustive Key Search}
 
 In cryptography, a brute-force attack consists of an attacker submitting
 many passwords or passphrases with the hope of eventually guessing
@@ -1163,7 +1056,7 @@ make the task easier.
 
 \pagebreak{}
 
-\subsection{Simple Substitution Cipher}
+\section{Simple Substitution Cipher}
 
 It is an improvement to the Caesar Cipher. Instead of shifting the
 alphabets by some number, this scheme uses some permutation of the
@@ -1175,7 +1068,7 @@ of 26) which is equal to $4\times10^{26}$. The sender and the receiver
 may choose any one of these possible permutation as a ciphertext alphabet.
 This permutation is the secret key of the scheme.
 
-\paragraph{Process of Simple Substitution Cipher}
+\subsubsection{Process of Simple Substitution Cipher}
 \begin{itemize}
 	\item Take the alphabets A, B, C,$\:\ldots\:$, Z in the natural order.
 	\item The sender and the receiver decide on a randomly selected permutation
@@ -1215,7 +1108,7 @@ Substitution Cipher has a simple design and it is prone to design
 flaws, say choosing obvious permutation, this cryptosystem can be
 easily broken.
 
-\subsection{Monoalphabetic and Polyalphabetic Cipher}
+\section{Monoalphabetic and Polyalphabetic Cipher}
 
 Monoalphabetic cipher is a substitution cipher in which for a given
 key, the cipher alphabet for each plain alphabet is fixed throughout
