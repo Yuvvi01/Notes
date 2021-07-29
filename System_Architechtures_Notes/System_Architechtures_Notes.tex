@@ -1,5 +1,6 @@
 \documentclass[british]{extreport}
 \usepackage{fourier}
+\renewcommand{\ttdefault}{lmtt}
 \usepackage[T1]{fontenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
@@ -13,14 +14,13 @@
 \usepackage{microtype}
 \onehalfspacing
 \usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=page,colorlinks=false]
- {hyperref}
+{hyperref}
 
 \makeatletter
 
 \providecommand{\tabularnewline}{\\}
 
 \newlength{\lyxlabelwidth}
-
 \AtBeginDocument{
   \def\labelitemi{\(\star\)}
 }
@@ -211,6 +211,98 @@ has almost become obsolete.
 	\includegraphics[scale=0.3]{Picture/FUNCTIONAL_UNIT}
 	\par\end{center}
 
+\subsection{Memory Unit}
+\begin{enumerate}
+	\item Stores programs and data
+	\item There are two classes of memory storage units:
+	      \begin{enumerate}
+		      \item Primary/Main Storage
+		            \begin{enumerate}
+			            \item Primary memory is the computer memory that is directly accessible
+			                  by CPU. It is comprised of DRAM and provides the actual working space
+			                  to the processor. It holds the data and instructions that the processor
+			                  is currently working on.
+			            \item Fastest programs must be stored in memory while they are being executed.
+			            \item Large number of semiconductor storage cells are present.
+			            \item Processed in words addresses, to provide easy access to any word value.
+		            \end{enumerate}
+		      \item Secondary/Mass Storage
+		            \begin{enumerate}
+			            \item The contents of the secondary memory first get transferred to the
+			                  primary memory and then are accessed by the processor, this is because
+			                  the processor does not directly interact with the secondary memory.
+			            \item Much larger storage capacity.
+			            \item Much cheaper due to less sophisticated storage cells.
+		            \end{enumerate}
+	      \end{enumerate}
+\end{enumerate}
+
+\subsection{Arithmetic and Logical Unit}
+
+\noindent In computing, an arithmetic logic unit (ALU) is a combinational
+digital circuit that performs arithmetic and bitwise operations on
+integer binary numbers. This is in contrast to a floating-point unit
+(FPU), which operates on floating point numbers. It is a fundamental
+building block of many types of computing circuits, including the
+central processing unit (CPU) of computers, FPUs, and graphics processing
+units (GPUs).
+
+\noindent The inputs to an ALU are the data to be operated on, called
+operands, and a code indicating the operation to be performed; the
+ALU's output is the result of the performed operation. In many designs,
+the ALU also has status inputs or outputs, or both, which convey information
+about a previous operation or the current operation, respectively,
+between the ALU and external status registers.
+\begin{verbatim}
+BASIC OPERATION:
+loads the operands into memory
+brings them to the processor
+performs the operation in ALU
+stores the result back inside the memory or may retain it in the processor
+\end{verbatim}
+
+\subsection{Control Unit}
+
+\noindent The control unit (CU) is a component of a computer's central
+processing unit (CPU) that directs the operation of the processor.
+It tells the computer's memory, arithmetic logic unit and input and
+output devices how to respond to the instructions that have been sent
+to the processor.
+
+\noindent It directs the operation of the other units by providing
+timing and control signals. Most computer resources are managed by
+the CU. It directs the flow of data between the CPU and the other
+devices. John von Neumann included the control unit as part of the
+von Neumann architecture. In modern computer designs, the control
+unit is typically an internal part of the CPU with its overall role
+and operation unchanged since its introduction.
+
+\noindent The CU manages all computer operations. The CU also generates
+the timing signals that control I/O transactions. Instead of existing
+independently, it is generally dispersed throughout the machine.
+
+\subsection{Input Unit}
+
+In computing, an input device is a piece of equipment used to provide
+data and control signals to an information processing system such
+as a computer or information appliance. Examples of input devices
+include keyboards, mouse, scanners, cameras, joysticks, and microphones
+\begin{description}
+	\item [{Example:}] In keyboard when a key is pressed, the corresponding
+	      letter or digit is automatically translated into its corresponding
+	      binary code (UNICODE/ASCII) and transmitted over the cable to the
+	      memory/processor.
+\end{description}
+
+\subsection{Output Unit}
+
+\noindent An output device is any piece of computer hardware equipment
+which converts information into human readable form. They contain
+the processed results given by the C.P.U. It can be text, graphics,
+tactile, audio, and video. Some of the output devices are Visual Display
+Units i.e. a Monitor, Printer graphic Output devices, Plotters, Speakers
+etc.
+
 \section{Information Handled by Computer}
 
 \subsection{Instructions/Machine Instructions}
@@ -225,8 +317,6 @@ has almost become obsolete.
 	\item Data used as operands by the instructions source program
 	\item Encoded in binary code: 0 and 1
 \end{itemize}
-\vfill{}
-
 
 \subsection{Data}
 \begin{itemize}
