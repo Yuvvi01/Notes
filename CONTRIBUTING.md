@@ -1,6 +1,6 @@
 # Contribution Guidelines 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 
@@ -32,7 +32,7 @@ Please help us keep our problem list as short as possible by adding fixes: #$ISS
 - Create new directory for each new subject files. Do not remove any directory or put your files in other subject's directory.
 - Do not upload `PDF` without the corresponding `.tex` or `.md` or `.ipynb` file.
 - If possible, follow the standard *within* the folder you are submitting to.
-- If you have modified/added `LaTeX code` work, make sure the code compiles before submitting.
+- If you have modified/added `LaTeX code` or `ipynb file`, make sure the code compiles before submitting.
 - If you have modified/added documentation work, ensure your language is concise and contains no grammatical errors.
 - Do not update the `README.md` or `DIRECTORY.md` file.
 - Most importantly, be consistent in the use of these guidelines when submitting.
