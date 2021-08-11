@@ -25,12 +25,12 @@ We are delighted to have you on board. You agree and acknowledge, as one of the 
 We welcome any input, from correcting a grammatical error in a manuscript to adding diagrams. Carefully read this section if you are presenting content.
 Please help us keep our problem list as short as possible by adding fixes: #$ISSUE NO to the commit message of pull requests that fix outstanding problems. When the PR is merged, GitHub will utilize this tag to automatically end the issue.
 
-> All the manuscripts, notes and cheat-sheets should be in LaTeX (`.tex` or `.latex`) or Markdown (`.md`) or Jupyter Notebook (`.ipnyb`) format, other formats will not be accepted.
+> All the manuscripts, notes and cheat-sheets should be in LaTeX (`.tex` or `.latex`) or Markdown (`.md`) or Jupyter Notebook (`.ipynb`) format, other formats will not be accepted.
 
 #### Other Requirements for Submissions
 
 - Create new directory for each new subject files. Do not remove any directory or put your files in other subject's directory.
-- Do not upload `PDF` without the corresponding `.tex` or `.md` file.
+- Do not upload `PDF` without the corresponding `.tex` or `.md` or `.ipynb` file.
 - If possible, follow the standard *within* the folder you are submitting to.
 - If you have modified/added `LaTeX code` work, make sure the code compiles before submitting.
 - If you have modified/added documentation work, ensure your language is concise and contains no grammatical errors.
