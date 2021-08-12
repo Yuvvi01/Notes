@@ -35,4 +35,4 @@
 Please submit your notes in LaTeX or Markdown or Jupyter Notebook Format should you'd like to contribute to this repository. Kindly do not duplicate from textbooks or other materials; instead, synthesize the material while acknowledging the appropriate academic publications and resources.
 ```
 
-Refer [How to Contribute?](CONTRIBUTION.md)
+Refer [How to Contribute?](CONTRIBUTING.md)
